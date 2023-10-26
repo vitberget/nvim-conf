@@ -23,8 +23,7 @@ return require('packer').startup(function(use)
 	use 'wbthomason/packer.nvim'
     use "HiPhish/nvim-ts-rainbow2"
 	use {
-		'nvim-telescope/telescope.nvim', --tag = '0.1.1',
-		-- or                            , branch = '0.1.x',
+		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
     use{'ckipp01/nvim-jenkinsfile-linter', requires = { {"nvim-lua/plenary.nvim" } } }
