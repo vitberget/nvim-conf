@@ -27,6 +27,7 @@ return require('packer').startup(function(use)
 		-- or                            , branch = '0.1.x',
 		requires = { {'nvim-lua/plenary.nvim'} }
 	}
+    use{'ckipp01/nvim-jenkinsfile-linter', requires = { {"nvim-lua/plenary.nvim" } } }
 
 	use({
 		'rose-pine/neovim',
@@ -73,7 +74,6 @@ return require('packer').startup(function(use)
         { 'saadparwaiz1/cmp_luasnip'  }
 	}
 }
---	use { "scrooloose/nerdtree" }
     use { 'nvim-tree/nvim-tree.lua' }
 	use { "jiangmiao/auto-pairs" }
 	use { "easymotion/vim-easymotion" }
@@ -84,7 +84,6 @@ return require('packer').startup(function(use)
 	use { "Olical/conjure" }
 
     use 'simrat39/rust-tools.nvim'
-    -- use 'puremourning/vimspector'
     use {'folke/neodev.nvim', requires = { "rcarriga/nvim-dap-ui"}}
     use 'mfussenegger/nvim-dap'
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"}  }
@@ -127,6 +126,8 @@ return require('packer').startup(function(use)
         end,
     })
     use 'NvChad/nvim-colorizer.lua'
+    use { "alexghergh/nvim-tmux-navigation" }
+
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
 if packer_bootstrap then

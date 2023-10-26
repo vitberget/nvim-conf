@@ -2,7 +2,6 @@ vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
 vim.keymap.set("n", "<F5>", ":buffers<CR>:buffer<Space>", { desc = "Select buffer" })
--- vim.keymap.set("n", "<leader>bs", ":buffers<CR>:buffer<Space>",{ desc = "Select buffer" })
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]b", ":bnext<CR>", { desc = "Next buffer" })
