@@ -28,3 +28,7 @@
   export JENKINS_URL=https://my.jenkins.hostname/
   export JENKINS_USER_ID=jenkins_user
   ```
+
+## Rust
+
+* Install `codelldb` with `Mason`
