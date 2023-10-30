@@ -22,6 +22,10 @@ return require('packer').startup(function(use)
 	-- Packer can manage itself
 	use 'wbthomason/packer.nvim'
     use "HiPhish/nvim-ts-rainbow2"
+    use {
+        'ThePrimeagen/harpoon',
+		requires = { {'nvim-lua/plenary.nvim'} }
+    }
 	use {
 		'nvim-telescope/telescope.nvim',
 		requires = { {'nvim-lua/plenary.nvim'} }
