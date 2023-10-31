@@ -130,6 +130,7 @@ return require('packer').startup(function(use)
     })
     use 'NvChad/nvim-colorizer.lua'
     use { "alexghergh/nvim-tmux-navigation" }
+    use {'nvim-telescope/telescope-ui-select.nvim' }
 
 -- Automatically set up your configuration after cloning packer.nvim
 -- Put this at the end after all plugins
