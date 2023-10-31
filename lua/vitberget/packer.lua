@@ -97,7 +97,7 @@ return require('packer').startup(function(use)
             require('nvim-test').setup()
         end
     }
-    
+
     use {
         "folke/which-key.nvim",
         config = function()

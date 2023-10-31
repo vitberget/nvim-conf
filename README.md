@@ -8,7 +8,7 @@
   ```
 * UndoTree cache
   ```sh
-  mkdir -p .cache/nvim-undo
+  mkdir -p ~/.cache/nvim-undo
   ```
 * Add to `tmux.conf`
   ```conf
