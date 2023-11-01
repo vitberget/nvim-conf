@@ -1,7 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-vim.keymap.set("n", "<F5>", ":buffers<CR>:buffer<Space>", { desc = "Select buffer" })
 vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]b", ":bnext<CR>", { desc = "Next buffer" })
@@ -12,8 +11,6 @@ vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "[q", ":cNext<CR>", { desc = "Previous tab" })
 
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
--- vim.keymap.set("n", "<M-1>", vim.cmd.Ex)
-
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
