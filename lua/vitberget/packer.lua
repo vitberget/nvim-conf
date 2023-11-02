@@ -84,7 +84,7 @@ return require('packer').startup(function(use)
 	use { "mattn/emmet-vim" }
 	use { 'guns/vim-sexp' }
 	use { 'tpope/vim-sexp-mappings-for-regular-people' }
-	use { "Olical/conjure" }
+	-- use { "Olical/conjure" }
 
     use 'simrat39/rust-tools.nvim'
     use {'folke/neodev.nvim', requires = { "rcarriga/nvim-dap-ui"}}
