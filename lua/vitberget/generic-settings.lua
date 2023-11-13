@@ -16,6 +16,7 @@ vim.opt.incsearch = true
 vim.opt.scrolloff = 8
 
 vim.opt.cursorline		= true
+vim.opt.cursorcolumn	= true
 vim.opt.number			= true
 vim.opt.relativenumber	= true
 
