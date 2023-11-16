@@ -15,6 +15,7 @@ local packer_bootstrap = ensure_packer()
 vim.cmd [[packadd packer.nvim]]
 
 return require('packer').startup(function(use)
+    use 'nfnty/vim-nftables'
     use 'will133/vim-dirdiff'
     use({ "L3MON4D3/LuaSnip",
           run = "make install_jsregexp"
