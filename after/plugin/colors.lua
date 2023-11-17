@@ -28,7 +28,7 @@ function ColorLight(color)
 
     vim.api.nvim_set_hl(0, "Cursor", { fg="orange", bg="orange" })
     vim.api.nvim_set_hl(0, "Cursor2", { fg="orange", bg="orange" })
-    vim.api.nvim_set_hl(0, "CursorColumn", { bg="#171000" })
+    vim.api.nvim_set_hl(0, "CursorColumn", { bg="#f2f2f2" })
 
     vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50"
 end
