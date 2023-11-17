@@ -1,0 +1,11 @@
+\usepackage{fancyvrb,newverbs,xcolor,fancyhdr}
+
+\definecolor{Light}{HTML}{F4F4F4}
+
+\let\oldtexttt\texttt
+\renewcommand{\texttt}[1]{
+  \colorbox{Light}{\oldtexttt{#1}}
+}
+
+\thispagestyle{empty}
+

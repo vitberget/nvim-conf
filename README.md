@@ -1,5 +1,6 @@
 # NVIM
 
+* Install `git`
 * UndoTree cache
   ```sh
   mkdir -p ~/.cache/nvim-undo
@@ -15,7 +16,6 @@
   bind-key -Ttable1 'k' select-pane -U
   bind-key -Ttable1 'l' select-pane -R
   ```
-* The vim-compiler stuff
 * Jenkins linter conf
   ```sh
   export JENKINS_PASSWORD=secret
