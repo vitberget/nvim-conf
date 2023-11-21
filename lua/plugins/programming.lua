@@ -7,11 +7,18 @@ return {
     { 'williamboman/mason-lspconfig.nvim', config = function ()
         require("mason-lspconfig").setup {
             ensure_installed = {
-                "codelldb",
+                -- "codelldb",
                 "rust_analyzer",
                 "texlab",
             },
         }
+    end},
+    {"jay-babu/mason-nvim-dap.nvim", config = function ()
+        require("mason-nvim-dap").setup({
+            ensure_installed = { 
+                "codelldb",
+            }
+        })
     end},
     { 'hrsh7th/nvim-cmp' },
     { 'hrsh7th/cmp-nvim-lsp' },
