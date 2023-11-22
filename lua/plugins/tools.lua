@@ -10,6 +10,7 @@ return {
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
     "mattn/emmet-vim",
+    'lambdalisue/suda.vim',
     'guns/vim-sexp',
     'tpope/vim-sexp-mappings-for-regular-people',
     {
