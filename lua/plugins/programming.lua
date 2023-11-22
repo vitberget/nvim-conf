@@ -4,7 +4,22 @@ return {
     { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
     { 'neovim/nvim-lspconfig' },
     { "williamboman/mason.nvim", opts = {} },
-    { 'williamboman/mason-lspconfig.nvim'},
+    { 'williamboman/mason-lspconfig.nvim', config = function ()
+        require("mason-lspconfig").setup {
+            ensure_installed = {
+                -- "codelldb",
+                "rust_analyzer",
+                "texlab",
+            },
+        }
+    end},
+    {"jay-babu/mason-nvim-dap.nvim", config = function ()
+        require("mason-nvim-dap").setup({
+            ensure_installed = { 
+                "codelldb",
+            }
+        })
+    end},
     { 'hrsh7th/nvim-cmp' },
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'L3MON4D3/LuaSnip' },
