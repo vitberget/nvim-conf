@@ -54,4 +54,3 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 	}
 end, { desc = "toggle diagnostic" })
 
-require('lspconfig').texlab.setup({})
