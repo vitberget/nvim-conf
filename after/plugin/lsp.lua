@@ -52,3 +52,8 @@ vim.api.nvim_create_user_command("DiagnosticToggle", function()
 	}
 end, { desc = "toggle diagnostic" })
 
+require('mason').setup({})
+require('mason-lspconfig').setup({
+  ensure_installed = {},
+  handlers = { lsp.default_setup, },
+})
