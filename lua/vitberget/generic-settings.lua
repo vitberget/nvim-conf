@@ -7,6 +7,8 @@ vim.opt.wrap        = false
 
 vim.opt.swapfile    = false
 vim.opt.backup      = false
+
+os.execute("mkdir -p ~/.cache/nvim-undo")
 vim.opt.undodir     = os.getenv("HOME") .. "/.cache/nvim-undo"
 vim.opt.undofile    = true
 
@@ -35,9 +37,17 @@ vim.opt.termguicolors = true
 
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
-vim.opt.formatoptions:remove({ 'c', 'r', 'o'  })
 
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.o.foldenable = false
 
+vim.api.nvim_create_autocmd(
+    "FileType", {
+        callback = function()
+            vim.opt.formatoptions:remove("c")
+            vim.opt.formatoptions:remove("r")
+            vim.opt.formatoptions:remove("o")
+        end
+    }
+)

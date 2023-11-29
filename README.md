@@ -1,10 +1,6 @@
 # NVIM
 
 * Install `git`
-* UndoTree cache
-  ```sh
-  mkdir -p ~/.cache/nvim-undo
-  ```
 * Add to `tmux.conf`
   ```conf
   is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
@@ -22,7 +18,3 @@
   export JENKINS_URL=https://my.jenkins.hostname/
   export JENKINS_USER_ID=jenkins_user
   ```
-
-## Rust
-
-* Install `codelldb` with `Mason`
