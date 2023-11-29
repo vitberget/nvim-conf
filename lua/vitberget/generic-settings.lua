@@ -48,6 +48,7 @@ vim.api.nvim_create_autocmd(
             vim.opt.formatoptions:remove("c")
             vim.opt.formatoptions:remove("r")
             vim.opt.formatoptions:remove("o")
+            vim.opt.formatoptions:remove("t")
         end
     }
 )
