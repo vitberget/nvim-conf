@@ -11,8 +11,8 @@ return {
     "tpope/vim-surround",
     "mattn/emmet-vim",
     'lambdalisue/suda.vim',
-    'guns/vim-sexp',
-    'tpope/vim-sexp-mappings-for-regular-people',
+    -- 'guns/vim-sexp',
+    -- 'tpope/vim-sexp-mappings-for-regular-people',
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -30,7 +30,7 @@ return {
         event = "VeryLazy",
         opts = {},
         keys = {
-            { "<leader>fj", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+            -- { "<leader>fj", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
             { "<leader>ft", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
             -- { "<leader>fr", mode = "o", function() require("flash").remote() end, desc = "Remote Flash" },
             -- { "<leader>fT", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
