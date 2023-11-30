@@ -40,5 +40,9 @@ return {
         config = function()
             require("nvim-paredit").setup()
         end
+    },
+    {
+        'simrat39/symbols-outline.nvim',
+        opts = {}
     }
 }
