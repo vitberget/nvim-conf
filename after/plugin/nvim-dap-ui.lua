@@ -16,3 +16,5 @@ vim.keymap.set('n', '<Leader>ut', function () dapui.toggle() end)
 vim.keymap.set('n', '<Leader>uo', function () dapui.open() end)
 vim.keymap.set('n', '<Leader>uO', function () dapui.open({ reset=true }) end)
 vim.keymap.set('n', '<Leader>uc', function () dapui.close() end)
+
+vim.keymap.set('n', '<Leader>uh', function () dapui.float_element("scopes", { enter=true }) end)
