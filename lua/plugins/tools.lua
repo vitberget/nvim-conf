@@ -11,8 +11,6 @@ return {
     "tpope/vim-surround",
     "mattn/emmet-vim",
     'lambdalisue/suda.vim',
-    -- 'guns/vim-sexp',
-    -- 'tpope/vim-sexp-mappings-for-regular-people',
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -36,5 +34,11 @@ return {
             -- { "<leader>fT", mode = { "o", "x" }, function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
             -- { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
         },
+    },
+    {
+        "julienvincent/nvim-paredit",
+        config = function()
+            require("nvim-paredit").setup()
+        end
     }
 }
