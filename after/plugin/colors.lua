@@ -1,4 +1,4 @@
-function ColorDark(color)
+local function colorDark(color)
     if color==nil or color=='' then
         color = "rose-pine"
     end
@@ -19,7 +19,7 @@ function ColorDark(color)
 
 end
 
-function ColorLight(color)
+local function colorLight(color)
     if color==nil or color=='' then
         color = "vscode"
     end
@@ -36,15 +36,14 @@ end
 
 vim.api.nvim_create_user_command( 'ColorDark',
 function (opts)
-    ColorDark(opts.args)
+    colorDark(opts.args)
 end,
 { nargs = '?' })
 
 vim.api.nvim_create_user_command( 'ColorLight',
 function (opts)
-    ColorLight(opts.args)
+    colorLight(opts.args)
 end,
 { nargs = '?' })
 
-
-ColorDark()
+colorDark()

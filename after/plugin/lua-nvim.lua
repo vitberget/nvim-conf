@@ -1,4 +1,3 @@
-
 vim.api.nvim_create_user_command( 'LuaNvimConfig',
 function ()
     local lsp = require('lsp-zero')

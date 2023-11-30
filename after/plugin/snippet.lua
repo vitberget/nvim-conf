@@ -19,11 +19,11 @@ local types = require("luasnip.util.types")
 local conds = require("luasnip.extras.conditions")
 local conds_expand = require("luasnip.extras.conditions.expand")
 
-ls.add_snippets("rust", {
-    s("trigger", {
-        t("Trigger!!!"),
-    })
-})
+-- ls.add_snippets("rust", {
+--     s("trigger", {
+--         t("Trigger!!!"),
+--     })
+-- })
 
 -- 'recursive' dynamic snippet. Expands to some text followed by itself.
 local rec_ls

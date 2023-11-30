@@ -1,7 +1,6 @@
 vim.keymap.set("n", "<leader>dc", ":lua require'dap'.continue()<CR>")
 vim.keymap.set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>")
---vim.keymap.set("n", "<leader>dR", ":VimspectorReset<CR>")
---
+
 vim.keymap.set({'n', 'v'}, '<Leader>dh', function()
     require('dap.ui.widgets').hover()
 end)
