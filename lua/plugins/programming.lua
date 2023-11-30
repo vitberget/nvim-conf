@@ -6,18 +6,12 @@ return {
     { "williamboman/mason.nvim", opts = {} },
     { 'williamboman/mason-lspconfig.nvim', config = function ()
         require("mason-lspconfig").setup {
-            ensure_installed = {
-                -- "codelldb",
-                "rust_analyzer",
-                "texlab",
-            },
+            ensure_installed = { "rust_analyzer", "texlab", },
         }
     end},
     {"jay-babu/mason-nvim-dap.nvim", config = function ()
         require("mason-nvim-dap").setup({
-            ensure_installed = { 
-                "codelldb",
-            }
+            ensure_installed = { "codelldb", }
         })
     end},
     { 'hrsh7th/nvim-cmp' },
@@ -31,11 +25,9 @@ return {
     { "klen/nvim-test", opts = {} },
     { 'nfnty/vim-nftables' },
     { 'ckipp01/nvim-jenkinsfile-linter' },
-    -- use { "Olical/conjure" }
-
     {
         "Olical/conjure",
-        ft = { "clojure", "fennel" }, -- etc
+        ft = { "clojure" }, -- etc
         -- [Optional] cmp-conjure for cmp
         dependencies = {
             {
@@ -61,7 +53,7 @@ return {
         end,
         init = function()
             -- Set configuration options here
-            vim.g["conjure#debug"] = true
+            -- vim.g["conjure#debug"] = true
         end,
     }
 }
