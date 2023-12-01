@@ -55,5 +55,6 @@ return {
             -- Set configuration options here
             -- vim.g["conjure#debug"] = true
         end,
-    }
+    },
+    -- "https://gitlab.com/invertisment/conjure-clj-additions-cider-nrepl-mw",
 }
