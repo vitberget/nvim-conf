@@ -37,11 +37,7 @@ return {
                     local config = cmp.get_config()
                     table.insert(config.sources, {
                         name = "buffer",
-                        option = {
-                            sources = {
-                                { name = "conjure" },
-                            },
-                        },
+                        option = { sources = { { name = "conjure" }, }, },
                     })
                     cmp.setup(config)
                 end,
@@ -56,5 +52,4 @@ return {
             -- vim.g["conjure#debug"] = true
         end,
     },
-    -- "https://gitlab.com/invertisment/conjure-clj-additions-cider-nrepl-mw",
 }
