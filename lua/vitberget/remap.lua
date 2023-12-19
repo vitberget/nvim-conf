@@ -7,6 +7,8 @@ vim.keymap.set("n", "]b", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "[b", ":bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]t", ":tabnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "[t", ":tabprev<CR>", { desc = "Previous tab" })
+vim.keymap.set("n", "]T", ":+tabmove<CR>", { desc = "Move tab left" })
+vim.keymap.set("n", "[T", ":-tabmove<CR>", { desc = "Move tab right" })
 vim.keymap.set("n", "]q", ":cnext<CR>", { desc = "Next tab" })
 vim.keymap.set("n", "[q", ":cNext<CR>", { desc = "Previous tab" })
 
