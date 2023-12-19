@@ -37,3 +37,5 @@ vim.keymap.set("n", "<Leader>cc", ":w! | !~/.config/nvim/vim-compiler/vim-compil
 vim.keymap.set("n", "<Leader>cp", ":!~/.config/nvim/vim-compiler/vim-view-file <c-r>%<CR><CR>")
 
 vim.keymap.set("n", "<Localleader>et", ":ConjureCljRunCurrentNsTests<CR>")
+
+vim.keymap.set("n", "<Leader>T", ":tabnew<CR>")

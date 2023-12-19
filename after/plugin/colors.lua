@@ -13,10 +13,17 @@ local function colorDark(color)
     vim.api.nvim_set_hl(0, "Cursor", { fg="orange", bg="orange" })
     vim.api.nvim_set_hl(0, "Cursor2", { fg="orange", bg="orange" })
     vim.api.nvim_set_hl(0, "CursorColumn", { bg="#171000" })
-    -- vim.api.nvim_set_hl(0, "Comment", { fg="#7e7a96" })
+
+    -- vim.opt.nvim_set_hl(0, "TabLine", { fg="#bbbbbb", bg="#111111" })
 
     vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50"
 
+end
+
+local function colorTabLineDark()
+    vim.api.nvim_set_hl(0, 'TabLineFill', { bg="none" })
+    vim.api.nvim_set_hl(0, 'TabLine', { bg="#222222", fg="#777777" })
+    vim.api.nvim_set_hl(0, 'TabLineSel', { bg="#444444", fg="#dbb070" })
 end
 
 local function colorLight(color)
@@ -37,6 +44,7 @@ end
 vim.api.nvim_create_user_command( 'ColorDark',
 function (opts)
     colorDark(opts.args)
+    colorTabLineDark()
 end,
 { nargs = '?' })
 
@@ -47,3 +55,7 @@ end,
 { nargs = '?' })
 
 colorDark()
+colorTabLineDark()
+
+
+vim.api.nvim_create_user_command('ColorTablineDark', colorTabLineDark, {})
