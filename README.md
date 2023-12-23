@@ -1,6 +1,9 @@
 # NVIM
 
-* Install `git`
+* Install 
+  * `git`
+  * `xxd`
+  * `ripgrep`
 * Add to `tmux.conf`
   ```conf
   is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
