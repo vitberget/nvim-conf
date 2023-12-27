@@ -1,4 +1,4 @@
-# NVIM
+# Neovim config
 
 ## Install 
 
