@@ -14,6 +14,6 @@ vim.keymap.set("n", "<M-0>", function() harpoon:list():append() end)
 vim.keymap.set("n", "<M-9>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 require("telescope").load_extension('harpoon')
-vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>" )
+vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>", {desc="Telescope Harpoon"} )
 
 

@@ -35,9 +35,9 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<Leader>xp", "\"+p")
 vim.keymap.set("v", "<Leader>xy", "\"+y")
 
-vim.keymap.set("n", "<Leader>cc", ":w! | !~/.config/nvim/vim-compiler/vim-compiler <c-r>%<CR><CR>")
-vim.keymap.set("n", "<Leader>cp", ":!~/.config/nvim/vim-compiler/vim-view-file <c-r>%<CR><CR>")
+vim.keymap.set("n", "<Leader>cc", ":w! | !~/.config/nvim/vim-compiler/vim-compiler <c-r>%<CR><CR>", {desc="My Compile"})
+vim.keymap.set("n", "<Leader>cp", ":!~/.config/nvim/vim-compiler/vim-view-file <c-r>%<CR><CR>", {desc="My Preview"})
 
-vim.keymap.set("n", "<Localleader>et", ":ConjureCljRunCurrentNsTests<CR>")
+vim.keymap.set("n", "<Localleader>et", ":ConjureCljRunCurrentNsTests<CR>", {desc="Clj current ns tests"})
 
-vim.keymap.set("n", "<Leader>T", ":tabnew<CR>")
+vim.keymap.set("n", "<Leader>T", ":tabnew<CR>", {desc="New tab"})
