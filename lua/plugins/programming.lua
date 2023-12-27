@@ -27,8 +27,7 @@ return {
     { 'ckipp01/nvim-jenkinsfile-linter' },
     {
         "Olical/conjure",
-        ft = { "clojure" }, -- etc
-        -- [Optional] cmp-conjure for cmp
+        ft = { "clojure" }, 
         dependencies = {
             {
                 "PaterJason/cmp-conjure",
@@ -51,5 +50,21 @@ return {
             -- Set configuration options here
             -- vim.g["conjure#debug"] = true
         end,
+    },
+    {
+        'nvimtools/none-ls.nvim',
+        config = function ()
+            local null_ls = require("null-ls")
+            null_ls.setup({
+                sources = {
+                    null_ls.builtins.code_actions.gitsigns,
+                },
+            })
+        end
+    },
+    {
+        'lewis6991/gitsigns.nvim',
+        config = {
+        }
     },
 }
