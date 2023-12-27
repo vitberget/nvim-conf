@@ -43,5 +43,13 @@ return {
         dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
         config = true,
     },
-    'RaafatTurki/hex.nvim'
+    'RaafatTurki/hex.nvim',
+    {
+        "cuducos/yaml.nvim",
+        ft = { "yaml" }, -- optional
+        dependencies = {
+            "nvim-treesitter/nvim-treesitter",
+            "nvim-telescope/telescope.nvim", -- optional
+        },
+    }
 }
