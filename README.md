@@ -26,3 +26,7 @@ export JENKINS_PASSWORD=secret
 export JENKINS_URL=https://my.jenkins.hostname/
 export JENKINS_USER_ID=jenkins_user
 ```
+
+## Consider
+
+* `simrat39/rust-tools.nvim` -> `mrcjkb/rustaceanvim`, problably after Neovim **0.10**
