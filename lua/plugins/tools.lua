@@ -51,5 +51,6 @@ return {
             "nvim-treesitter/nvim-treesitter",
             "nvim-telescope/telescope.nvim", -- optional
         },
-    }
+    },
+     "mg979/vim-visual-multi",
 }
