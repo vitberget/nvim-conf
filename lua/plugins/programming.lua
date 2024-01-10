@@ -62,9 +62,5 @@ return {
             })
         end
     },
-    {
-        'lewis6991/gitsigns.nvim',
-        config = {
-        }
-    },
+    { 'lewis6991/gitsigns.nvim', opts = {} },
 }
