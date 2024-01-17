@@ -30,3 +30,4 @@ export JENKINS_USER_ID=jenkins_user
 ## Consider
 
 * `simrat39/rust-tools.nvim` -> `mrcjkb/rustaceanvim`, problably after Neovim **0.10**
+* Other OpenCL highlighting
