@@ -30,4 +30,5 @@ export JENKINS_USER_ID=jenkins_user
 ## Consider
 
 * `simrat39/rust-tools.nvim` -> `mrcjkb/rustaceanvim`, problably after Neovim **0.10**
+* swap-words using more proper nvim lua api
 * Other OpenCL highlighting

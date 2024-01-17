@@ -4,16 +4,8 @@ args="$@"
 file=$(readlink -f "$args")
 dir=$(dirname "$file")
 base="${file%.*}"
-shebang=$(sed -n 1p "$file")
 
 cd "$dir" || exit
-
-shebangtest() {
-	case "$shebang" in
-		\#\!*) "$file" ;;
-		*) sent "$file" 2>/dev/null & ;;
-	esac
-}
 
 case "$file" in
 	*\.md) pandoc "$file" -o "$base".pdf \
@@ -29,6 +21,5 @@ case "$file" in
 				 --highlight-style ~/.config/nvim/vim-compiler/pygments.theme
                  ;;
 	*\.dot) dot -Tpng "$file" > "$base.png" ;;
-	*) shebangtest ;;
 esac
 
