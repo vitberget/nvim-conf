@@ -1,6 +1,6 @@
 # Neovim config
 
-## Install 
+## Install deps
 
 * `git`
 * `xxd`
@@ -8,7 +8,7 @@
 
 ## `tmux.conf`
 
-```conf
+```sh
 is_vim="ps -o state= -o comm= -t '#{pane_tty}' \
     | grep -iqE '^[^TXZ ]+ +(\\S+\\/)?g?(view|n?vim?x?)(diff)?$'"
 
@@ -38,4 +38,4 @@ touch pyrightconfig.json
 
 * `simrat39/rust-tools.nvim` -> `mrcjkb/rustaceanvim`, problably after Neovim **0.10**
 * swap-words using more proper nvim lua api
-* Other OpenCL highlighting
+* Other OpenCL highlighting?
