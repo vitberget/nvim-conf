@@ -1,8 +1,6 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = ","
 
-vim.keymap.set("n", "<leader>bn", ":bnext<CR>", { desc = "Next buffer" })
-vim.keymap.set("n", "<leader>bp", ":bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]b", ":bnext<CR>", { desc = "Next buffer" })
 vim.keymap.set("n", "[b", ":bprev<CR>", { desc = "Previous buffer" })
 vim.keymap.set("n", "]t", ":tabnext<CR>", { desc = "Next tab" })
@@ -39,7 +37,5 @@ vim.keymap.set("v", "<Leader>xy", "\"+y")
 
 vim.keymap.set("n", "<Leader>cc", ":w! | !~/.config/nvim/vim-compiler/vim-compiler <c-r>%<CR><CR>", {desc="My Compile"})
 vim.keymap.set("n", "<Leader>cp", ":!~/.config/nvim/vim-compiler/vim-view-file <c-r>%<CR><CR>", {desc="My Preview"})
-
-vim.keymap.set("n", "<Localleader>et", ":ConjureCljRunCurrentNsTests<CR>", {desc="Clj current ns tests"})
 
 vim.keymap.set("n", "<Leader>T", ":tabnew<CR>", {desc="New tab"})
