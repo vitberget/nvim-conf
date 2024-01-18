@@ -27,6 +27,13 @@ export JENKINS_URL=https://my.jenkins.hostname/
 export JENKINS_USER_ID=jenkins_user
 ```
 
+## Python / pyright - multifile
+
+```sh
+# in root folder of python
+touch pyrightconfig.json
+```
+
 ## Consider
 
 * `simrat39/rust-tools.nvim` -> `mrcjkb/rustaceanvim`, problably after Neovim **0.10**
