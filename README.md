@@ -39,3 +39,5 @@ touch pyrightconfig.json
 * `simrat39/rust-tools.nvim` -> `mrcjkb/rustaceanvim`, problably after Neovim **0.10**
 * swap-words using more proper nvim lua api
 * Other OpenCL highlighting?
+* <https://github.com/nvim-telescope/telescope-dap.nvim>
+* <https://github.com/camgraff/telescope-tmux.nvim>
