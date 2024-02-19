@@ -39,3 +39,5 @@ vim.keymap.set("n", "<Leader>cc", ":w! | !~/.config/nvim/vim-compiler/vim-compil
 vim.keymap.set("n", "<Leader>cp", ":!~/.config/nvim/vim-compiler/vim-view-file <c-r>%<CR><CR>", {desc="My Preview"})
 
 vim.keymap.set("n", "<Leader>T", ":tabnew<CR>", {desc="New tab"})
+
+vim.keymap.set("v", "<Leader>S", ":sort<CR>", {desc="Sort"})
