@@ -68,5 +68,6 @@ return {
             "rcarriga/nvim-notify",
         }
     },
-    'nvim-telescope/telescope-symbols.nvim'
+    'nvim-telescope/telescope-symbols.nvim',
+    'phelipetls/jsonpath.nvim'
 }
