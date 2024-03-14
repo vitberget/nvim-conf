@@ -18,7 +18,11 @@ return {
     { 'hrsh7th/cmp-nvim-lsp' },
     { 'L3MON4D3/LuaSnip' },
     { 'saadparwaiz1/cmp_luasnip' },
-    'simrat39/rust-tools.nvim',
+    {
+        'mrcjkb/rustaceanvim',
+        version = '^4', -- Recommended
+        ft = { 'rust' },
+    },
     'folke/neodev.nvim',
     'mfussenegger/nvim-dap',
     "rcarriga/nvim-dap-ui",
@@ -27,7 +31,7 @@ return {
     { 'ckipp01/nvim-jenkinsfile-linter' },
     {
         "Olical/conjure",
-        ft = { "clojure" }, 
+        ft = { "clojure" },
         dependencies = {
             {
                 "PaterJason/cmp-conjure",

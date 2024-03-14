@@ -1,4 +1,0 @@
--- require'lspconfig'.rust_analyzer.setup{
---   -- cmd = "/full/path/to/rust-analyzer",
---     cmd = { vim.env.HOME ..  "/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/bin/rust-analyzer"}
--- }
