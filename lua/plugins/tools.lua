@@ -37,7 +37,7 @@ return {
             require("nvim-paredit").setup()
         end
     },
-    { 'simrat39/symbols-outline.nvim', opts = {} },
+    -- { 'simrat39/symbols-outline.nvim', opts = {} },
     {
         'crispgm/nvim-tabline',
         dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
