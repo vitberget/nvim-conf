@@ -9,6 +9,7 @@ return {
     "jiangmiao/auto-pairs",
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
+    "tpope/vim-abolish",
     "mattn/emmet-vim",
     'lambdalisue/suda.vim',
     {
