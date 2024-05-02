@@ -54,7 +54,7 @@ return {
         end
     },
     'folke/neodev.nvim',
-    'mfussenegger/nvim-dap',
+    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
     "rcarriga/nvim-dap-ui",
     { "klen/nvim-test", opts = {} },
     { 'nfnty/vim-nftables' },
