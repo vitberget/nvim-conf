@@ -40,3 +40,4 @@ touch pyrightconfig.json
 * Other OpenCL highlighting?
 * <https://github.com/nvim-telescope/telescope-dap.nvim>
 * <https://github.com/camgraff/telescope-tmux.nvim>
+* oil.nvim

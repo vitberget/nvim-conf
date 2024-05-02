@@ -9,6 +9,7 @@ return {
     "jiangmiao/auto-pairs",
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
+    "tpope/vim-abolish",
     "mattn/emmet-vim",
     'lambdalisue/suda.vim',
     {
@@ -37,7 +38,7 @@ return {
             require("nvim-paredit").setup()
         end
     },
-    { 'simrat39/symbols-outline.nvim', opts = {} },
+    -- { 'simrat39/symbols-outline.nvim', opts = {} },
     {
         'crispgm/nvim-tabline',
         dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional

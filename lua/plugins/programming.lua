@@ -55,7 +55,7 @@ return {
     },
     'folke/neodev.nvim',
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
-    "rcarriga/nvim-dap-ui",
+    'mfussenegger/nvim-dap',
     { "klen/nvim-test", opts = {} },
     { 'nfnty/vim-nftables' },
     { 'ckipp01/nvim-jenkinsfile-linter' },
