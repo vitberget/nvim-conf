@@ -70,5 +70,11 @@ return {
         }
     },
     'nvim-telescope/telescope-symbols.nvim',
-    'phelipetls/jsonpath.nvim'
+    'phelipetls/jsonpath.nvim',
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    }
 }
