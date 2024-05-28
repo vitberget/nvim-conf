@@ -10,7 +10,7 @@ vim.keymap.set("n", "<M-6>", function() harpoon:list():select(6) end)
 vim.keymap.set("n", "<M-7>", function() harpoon:list():select(7) end)
 vim.keymap.set("n", "<M-8>", function() harpoon:list():select(8) end)
 
-vim.keymap.set("n", "<M-0>", function() harpoon:list():append() end)
+vim.keymap.set("n", "<M-0>", function() harpoon:list():add() end)
 vim.keymap.set("n", "<M-9>", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
 
 require("telescope").load_extension('harpoon')
