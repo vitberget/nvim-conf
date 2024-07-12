@@ -68,4 +68,12 @@ return {
     },
     { 'lewis6991/gitsigns.nvim', opts = {} },
     'brgmnn/vim-opencl',
+    -- { 't-troebst/perfanno.nvim', opts = {
+    --     telescope = {
+    --         -- Enable if possible, otherwise the plugin will fall back to vim.ui.select
+    --         enabled = pcall(require, "telescope"),
+    --         -- Annotate inside of the preview window
+    --         annotate = true,
+    --     },
+    -- } }
 }
