@@ -41,3 +41,5 @@ touch pyrightconfig.json
 * <https://github.com/nvim-telescope/telescope-dap.nvim>
 * <https://github.com/camgraff/telescope-tmux.nvim>
 * dadbod
+* Perf
+    * <https://github.com/t-troebst/perfanno.nvim>
