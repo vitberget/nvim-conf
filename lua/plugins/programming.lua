@@ -20,8 +20,25 @@ return {
     { 'saadparwaiz1/cmp_luasnip' },
     {
         'mrcjkb/rustaceanvim',
-        version = '^4', -- Recommended
+        version = '^5', -- Recommended
         ft = { 'rust' },
+    },
+    {
+        'saecki/crates.nvim',
+        ft = {"toml"},
+        tag = 'stable',
+        config = function()
+            require("crates").setup {
+                completion = {
+                    cmp = {
+                        enabled = true
+                    },
+                },
+            }
+            require('cmp').setup.buffer({
+                sources = { { name = "crates" }}
+            })
+        end
     },
     'folke/neodev.nvim',
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
