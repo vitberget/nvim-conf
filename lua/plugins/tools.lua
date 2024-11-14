@@ -1,6 +1,38 @@
 return {
     'will133/vim-dirdiff',
-    'nvim-treesitter/nvim-treesitter',
+    {
+        'nvim-treesitter/nvim-treesitter',
+        build = ":TSUpdate",
+        config = function ()
+            local configs = require("nvim-treesitter.configs")
+
+            configs.setup({
+                ensure_installed = { "c", "lua", "query", "javascript", "rust" },
+                sync_install = false,
+                auto_install = true,
+
+                highlight = {
+                    enable = true,
+                    additional_vim_regex_highlighting = true,
+                },
+
+            })
+        end
+    },
+    {
+        "rayliwell/tree-sitter-rstml",
+        dependencies = { "nvim-treesitter" },
+        build = ":TSUpdate",
+        config = function ()
+            require("tree-sitter-rstml").setup()
+        end
+    },
+    {
+        "windwp/nvim-ts-autotag",
+        config = function()
+            require("nvim-ts-autotag").setup()
+        end,
+    },
     'nvim-treesitter/playground',
     'mbbill/undotree',
     -- 'tpope/vim-fugitive',
@@ -23,7 +55,24 @@ return {
     },
     { "folke/twilight.nvim", opts = { } },
     'NvChad/nvim-colorizer.lua',
-    "alexghergh/nvim-tmux-navigation",
+    -- "alexghergh/nvim-tmux-navigation",
+    {
+        "aserowy/tmux.nvim",
+        opts = {
+            copy_sync = {
+                enable = true,
+            },
+            navigation = {
+                enable_default_keybindings = false
+            }
+        },
+        keys = {
+            { "<C-w>h", mode = {"n"}, function () require("tmux").move_left() end, desc = "Navigate left" },
+            { "<C-w>j", mode = {"n"}, function () require("tmux").move_down() end, desc = "Navigate down" },
+            { "<C-w>k", mode = {"n"}, function () require("tmux").move_up() end, desc = "Navigate up" },
+            { "<C-w>l", mode = {"n"}, function () require("tmux").move_right() end, desc = "Navigate right" },
+        }
+    },
     {
         "folke/flash.nvim",
         event = "VeryLazy",

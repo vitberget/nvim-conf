@@ -13,6 +13,8 @@ vim.g.rustaceanvim = function()
     }
 end
 
+require("tree-sitter-rstml").setup()
+
 vim.keymap.set("n", "<leader>Rr", ":RustLsp runnables<CR>" , {desc="Rust Runnables"})
 vim.keymap.set("n", "<leader>Rd", ":RustLsp debuggables<CR>" , {desc="Rust Debuggables"})
 vim.keymap.set("n", "<leader>Rt", ":RustLsp testables<CR>" , {desc="Rust Testables"})
@@ -26,3 +28,4 @@ vim.keymap.set("n", "<leader>Rj", ":RustLsp joinLines<CR>" , {desc="Rust join li
 vim.keymap.set("n", "<leader>Rp", ":RustLsp parentModule<CR>", {desc="Rust parent module"} )
 vim.keymap.set("n", "<leader>Ro", ":RustLsp openCargo<CR>", {desc="Rust Open Cargo"} )
 vim.keymap.set("n", "<leader>Rw", ":RustLsp reloadWorkspace<CR>", {desc="Rust reload workspace"} )
+vim.keymap.set("n", "<leader>Rl", ":% !leptosfmt --stdin<CR>", {desc="Leptos format"} )
