@@ -35,6 +35,9 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 vim.keymap.set("n", "<Leader>xp", "\"+p")
 vim.keymap.set("v", "<Leader>xy", "\"+y")
 
+vim.keymap.set("v", "<Leader>ty", ":w !tmux load-buffer -w -<CR>", {desc="Tmux Yank"})
+vim.keymap.set("n", "<Leader>tp", ":r !tmux save-buffer -<CR>", {desc="Tmux Pull"})
+
 vim.keymap.set("n", "<Leader>cc", ":w! | !~/.config/nvim/vim-compiler/vim-compiler <c-r>%<CR><CR>", {desc="My Compile"})
 vim.keymap.set("n", "<Leader>cp", ":!~/.config/nvim/vim-compiler/vim-view-file <c-r>%<CR><CR>", {desc="My Preview"})
 
