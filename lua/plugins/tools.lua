@@ -58,9 +58,15 @@ return {
     -- "alexghergh/nvim-tmux-navigation",
     {
         "aserowy/tmux.nvim",
+        init = function()
+            vim.opt.clipboard = "unnamedplus"
+            vim.opt.fixeol = false
+        end,
         opts = {
             copy_sync = {
                 enable = true,
+                -- sync_registers = true,
+                -- sync_registers_keymap_put = true,
             },
             navigation = {
                 enable_default_keybindings = false
@@ -68,10 +74,10 @@ return {
         },
         keys = {
             { "<C-w>h", mode = {"n"}, function () require("tmux").move_left() end, desc = "Navigate left" },
-            { "<C-w>j", mode = {"n"}, function () require("tmux").move_down() end, desc = "Navigate down" },
-            { "<C-w>k", mode = {"n"}, function () require("tmux").move_up() end, desc = "Navigate up" },
+            { "<C-w>j", mode = {"n"}, function () require("tmux").move_bottom() end, desc = "Navigate down" },
+            { "<C-w>k", mode = {"n"}, function () require("tmux").move_top() end, desc = "Navigate up" },
             { "<C-w>l", mode = {"n"}, function () require("tmux").move_right() end, desc = "Navigate right" },
-        }
+        },
     },
     {
         "folke/flash.nvim",
