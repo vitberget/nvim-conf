@@ -131,5 +131,11 @@ return {
         opts = {},
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
+    },
+    {
+        'hat0uma/csvview.nvim',
+        config = function()
+            require('csvview').setup()
+        end
     }
 }
