@@ -151,11 +151,15 @@ return {
             'RainbowMultiDelim'
         }
     },
-    -- {
-    --     'tummetott/unimpaired.nvim',
-    --     event = 'VeryLazy',
-    --     opts = {
-    --         -- add options here if you wish to override the default settings
-    --     },
-    -- }
+    {
+        "folke/zen-mode.nvim",
+        opts = {
+            window = {
+                options = {
+                    number = false,
+                    relativenumber = false,
+                }
+            },
+        }
+    },
 }
