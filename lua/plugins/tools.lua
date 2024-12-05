@@ -1,5 +1,4 @@
 return {
-    'will133/vim-dirdiff',
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
@@ -19,30 +18,9 @@ return {
             })
         end
     },
-    {
-        "rayliwell/tree-sitter-rstml",
-        dependencies = { "nvim-treesitter" },
-        build = ":TSUpdate",
-        config = function ()
-            require("tree-sitter-rstml").setup()
-        end
-    },
-    {
-        "windwp/nvim-ts-autotag",
-        config = function()
-            require("nvim-ts-autotag").setup()
-        end,
-    },
-    'nvim-treesitter/playground',
-    'mbbill/undotree',
-    -- 'tpope/vim-fugitive',
-    -- 'airblade/vim-gitgutter',
-    'nvim-tree/nvim-tree.lua',
-    "jiangmiao/auto-pairs",
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
     "tpope/vim-abolish",
-    "mattn/emmet-vim",
     'lambdalisue/suda.vim',
     {
         "folke/which-key.nvim",
@@ -53,9 +31,6 @@ return {
         end,
         opts = { }
     },
-    { "folke/twilight.nvim", opts = { } },
-    'NvChad/nvim-colorizer.lua',
-    -- "alexghergh/nvim-tmux-navigation",
     {
         "aserowy/tmux.nvim",
         init = function()
@@ -80,35 +55,17 @@ return {
         },
     },
     {
-        "folke/flash.nvim",
-        event = "VeryLazy",
-        opts = { modes = { search = { enabled = false, } } },
-        keys = {
-            { "<leader>ft", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
-        },
-    },
-    {
         "julienvincent/nvim-paredit",
         config = function()
             require("nvim-paredit").setup()
         end
     },
-    -- { 'simrat39/symbols-outline.nvim', opts = {} },
     {
         'crispgm/nvim-tabline',
         dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
         config = true,
     },
     'RaafatTurki/hex.nvim',
-    {
-        "cuducos/yaml.nvim",
-        ft = { "yaml" }, -- optional
-        dependencies = {
-            "nvim-treesitter/nvim-treesitter",
-            "nvim-telescope/telescope.nvim", -- optional
-        },
-    },
-    "mg979/vim-visual-multi",
     {
         "folke/noice.nvim",
         event = "VeryLazy",
@@ -125,31 +82,11 @@ return {
         }
     },
     'nvim-telescope/telescope-symbols.nvim',
-    'phelipetls/jsonpath.nvim',
     {
         'stevearc/oil.nvim',
         opts = {},
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
-    },
-    {
-        'cameron-wags/rainbow_csv.nvim',
-        config = true,
-        ft = {
-            'csv',
-            'tsv',
-            'csv_semicolon',
-            'csv_whitespace',
-            'csv_pipe',
-            'rfc_csv',
-            'rfc_semicolon'
-        },
-        cmd = {
-            'RainbowDelim',
-            'RainbowDelimSimple',
-            'RainbowDelimQuoted',
-            'RainbowMultiDelim'
-        }
     },
     {
         "folke/zen-mode.nvim",

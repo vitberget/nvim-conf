@@ -8,8 +8,8 @@ vim.opt.wrap        = false
 vim.opt.swapfile    = false
 vim.opt.backup      = false
 
-os.execute("mkdir -p ~/.cache/nvim-undo")
-vim.opt.undodir     = os.getenv("HOME") .. "/.cache/nvim-undo"
+os.execute("mkdir -p ~/.cache/nvim-mini-undo")
+vim.opt.undodir     = os.getenv("HOME") .. "/.cache/nvim-mini-undo"
 vim.opt.undofile    = true
 
 vim.opt.hlsearch = false
