@@ -38,7 +38,21 @@ return {
     -- 'tpope/vim-fugitive',
     -- 'airblade/vim-gitgutter',
     'nvim-tree/nvim-tree.lua',
-    "jiangmiao/auto-pairs",
+    {
+        'windwp/nvim-autopairs',
+        event = "InsertEnter",
+        config = true,
+        -- "jiangmiao/auto-pairs",
+        -- config = true,
+        opts = {
+            disable_in_visualblock = true,
+        },
+        keys = {
+            { "<leader>at", mode = { "n" }, function() require("nvim-autopairs").toggle() end, desc = "Autopairs Toggle" },
+            { "<leader>ae", mode = { "n" }, function() require("nvim-autopairs").enable() end, desc = "Autopairs Enable" },
+            { "<leader>ad", mode = { "n" }, function() require("nvim-autopairs").disable() end, desc = "Autopairs Disable" },
+        },
+    },
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
     "tpope/vim-abolish",
