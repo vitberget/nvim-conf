@@ -13,6 +13,17 @@
   vim.api.nvim_create_autocmd(
     {"BufNewFile", "BufRead"},
     {
+        pattern = "*.service",
+        callback = function ()
+            local buf = vim.api.nvim_get_current_buf()
+            vim.api.nvim_set_option_value("filetype", "systemd", {buf = buf})
+        end
+    }
+  )
+
+  vim.api.nvim_create_autocmd(
+    {"BufNewFile", "BufRead"},
+    {
         pattern = "*.simconf",
         callback = function ()
             local buf = vim.api.nvim_get_current_buf()
