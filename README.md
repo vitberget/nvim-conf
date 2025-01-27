@@ -6,6 +6,8 @@
 * `xxd`
 * `ripgrep`
 
+See (or run) [install-deps.sh](install-deps.sh) for more information.
+
 ## `tmux.conf`
 
 ```sh
