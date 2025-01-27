@@ -45,3 +45,4 @@ touch pyrightconfig.json
 * dadbod
 * Perf
     * <https://github.com/t-troebst/perfanno.nvim>
+* mini.nvim
