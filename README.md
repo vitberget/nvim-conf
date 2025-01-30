@@ -46,3 +46,4 @@ touch pyrightconfig.json
 * Perf
     * <https://github.com/t-troebst/perfanno.nvim>
 * mini.nvim
+* <https://github.com/vague2k/vague.nvim>
