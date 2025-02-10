@@ -33,24 +33,10 @@ return {
     },
     {
         "aserowy/tmux.nvim",
-        -- init = function()
-        --     vim.opt.clipboard = "unnamedplus"
-        --     vim.opt.fixeol = false
-        -- end,
-    --     config = function() 
-    --     return require("tmux").setup({
-    --         copy_sync = {
-    --             enable = false
-    --         },
-    --     }) 
-    -- end,
         opts = {
             copy_sync = {
-                enable = false,
-                sync_clipbard = false,
-                -- sync_deletes = false,
-                -- sync_registers = true,
-                -- sync_registers_keymap_put = true,
+                enable = true,
+                redirect_to_clipboard = false,
             },
             navigation = {
                 enable_default_keybindings = false
