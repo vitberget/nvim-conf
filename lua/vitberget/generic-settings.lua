@@ -54,3 +54,4 @@ vim.api.nvim_create_autocmd(
 )
 
 vim.o.splitright = true
+vim.opt.fixeol = false
