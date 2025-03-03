@@ -20,3 +20,4 @@ vim.keymap.set('n', '<leader>td', fzf.diagnostics_document, { desc = "FZF diagno
 vim.keymap.set('n', '<leader>tq', fzf.quickfix, { desc = "FZF quickfix" })
 vim.keymap.set('n', '<leader>tl', fzf.loclist, { desc = "FZF loclist" })
 vim.keymap.set('n', '<leader>tw', fzf.lsp_live_workspace_symbols, { desc = "FZF workspace symbols" })
+vim.keymap.set('n', '<leader>tt', ":TodoFzfLua<CR>", { desc = "FZF TODO" })
