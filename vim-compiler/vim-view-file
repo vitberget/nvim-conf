@@ -5,7 +5,7 @@ basename="${args%.*}"
 READER=zathura
 
 case "$args" in
-	*.md|*.rmd|*.ms|*.me|*.mom) setsid "$READER" "$basename".pdf >/dev/null 2>&1 & ;;
+	*.md|*.rmd|*.ms|*.me|*.mom|*.typ) setsid "$READER" "$basename".pdf >/dev/null 2>&1 & ;;
 	*.html) setsid "$BROWSER" --new-window "$basename".html >/dev/null 2>&1 & ;;
 	*.dot) sxiv "$basename.png" >/dev/null 2>&1 & ;;
 esac
