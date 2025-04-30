@@ -44,9 +44,9 @@ lsp.on_attach(function(client, bufnr)
         { buffer = bufnr, remap = false, desc = "Go to definition" })
 	vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end,
         { buffer = bufnr, remap = false, desc = "Hover LSP" })
-	vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count=-1, float=false}) end,
+	vim.keymap.set("n", "]d", function() vim.diagnostic.jump({ count=1, float=false}) end,
         { buffer = bufnr, remap = false, desc = "Prev diagnostic" })
-	vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count=1, float=false}) end,
+	vim.keymap.set("n", "[d", function() vim.diagnostic.jump({ count=-1, float=false}) end,
         { buffer = bufnr, remap = false, desc = "Next diagnostic" })
 	vim.keymap.set("n", "<leader>co", function() vim.diagnostic.open_float() end,
         { buffer = bufnr, remap = false, desc = "Diagnostic popup" })
