@@ -131,7 +131,11 @@ return {
             --   `nvim-notify` is only needed, if you want to use the notification view.
             --   If not available, we use `mini` as the fallback
             "rcarriga/nvim-notify",
-        }
+        },
+        keys = {
+            { "<leader>nd", mode = { "n" }, ":NoiceDismiss<CR>", desc = "NoiceDismiss" },
+        },
+        -- vim.keymap.set('n', '<leader>nd', ":NoiceDismiss<CR>" , { desc = "NoiceDismiss" })
     },
     'nvim-telescope/telescope-symbols.nvim',
     'phelipetls/jsonpath.nvim',
