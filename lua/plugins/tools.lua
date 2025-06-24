@@ -20,12 +20,10 @@ return {
         end
     },
     {
-        "rayliwell/tree-sitter-rstml",
-        dependencies = { "nvim-treesitter" },
-        build = ":TSUpdate",
-        config = function ()
-            require("tree-sitter-rstml").setup()
-        end
+        'chomosuke/typst-preview.nvim',
+        lazy = false, -- or ft = 'typst'
+        version = '1.*',
+        opts = {}, -- lazy.nvim will implicitly calls `setup {}`
     },
     {
         "windwp/nvim-ts-autotag",

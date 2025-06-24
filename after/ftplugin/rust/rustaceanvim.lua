@@ -13,7 +13,7 @@ vim.g.rustaceanvim = function()
     }
 end
 
-require("tree-sitter-rstml").setup()
+--require("tree-sitter-rstml").setup()
 
 vim.keymap.set("n", "<leader>Rr", ":RustLsp runnables<CR>" , {desc="Rust Runnables"})
 vim.keymap.set("n", "<leader>Rd", ":RustLsp debuggables<CR>" , {desc="Rust Debuggables"})
