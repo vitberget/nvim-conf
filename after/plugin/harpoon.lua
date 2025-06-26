@@ -25,7 +25,8 @@ vim.keymap.set("n", "<leader>8", function() harpoon:list():select(8) end, {desc=
 vim.keymap.set("n", "<leader>0", function() harpoon:list():add() end, {desc="Harpoon add"})
 vim.keymap.set("n", "<leader>9", function() harpoon.ui:toggle_quick_menu(harpoon:list()) end, {desc="Harpoon quick menu"})
 
+vim.keymap.set("n", "[h", function() harpoon:list():prev() end, {desc="Harpoon prev"})
+vim.keymap.set("n", "]h", function() harpoon:list():next() end, {desc="Harpoon next"})
+
 require("telescope").load_extension('harpoon')
 vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>", {desc="Telescope Harpoon"} )
-
-
