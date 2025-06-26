@@ -24,9 +24,9 @@ bind-key -Ttable1 'l' select-pane -R
 ## Jenkins linter conf
 
 ```sh
-export JENKINS_PASSWORD=secret
 export JENKINS_URL=https://my.jenkins.hostname/
 export JENKINS_USER_ID=jenkins_user
+export JENKINS_PASSWORD=secret
 ```
 
 ## Python / pyright - multifile
