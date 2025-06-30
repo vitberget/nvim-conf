@@ -20,7 +20,7 @@ return {
     { 'saadparwaiz1/cmp_luasnip' },
     {
         'mrcjkb/rustaceanvim',
-        version = '^5', -- Recommended
+        version = '^6', -- Recommended
         lazy = false,
         ft = { 'rust' },
     },
