@@ -3,6 +3,9 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     opts = {
         signs = false,
+        keywords = {
+            TODO = { alt = { "todo", "unimplemented" } },
+        },
         highlight = {
             pattern = [[.*<(KEYWORDS)\s*]],
             keyword = "fg",
