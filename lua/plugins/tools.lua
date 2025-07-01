@@ -135,7 +135,6 @@ return {
         },
         -- vim.keymap.set('n', '<leader>nd', ":NoiceDismiss<CR>" , { desc = "NoiceDismiss" })
     },
-    'nvim-telescope/telescope-symbols.nvim',
     'phelipetls/jsonpath.nvim',
     {
         'stevearc/oil.nvim',
