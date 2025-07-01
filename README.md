@@ -48,3 +48,4 @@ touch pyrightconfig.json
 * mini.nvim
 * <https://github.com/vague2k/vague.nvim>
 * Update everything...
+* folke/lazydev
