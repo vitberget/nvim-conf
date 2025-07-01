@@ -47,3 +47,5 @@ vim.keymap.set("v", "<Leader>S", ":sort<CR>", {desc="Sort"})
 vim.keymap.set("n", "<Leader>S", ":sort<CR>", {desc="Sort"})
 
 vim.keymap.set("n", "<Leader>vr", ":hi Visual term=reverse cterm=reverse gui=reverse<CR>", {desc="Visual Reverse"})
+
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })

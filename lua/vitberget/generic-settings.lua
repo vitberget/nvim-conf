@@ -32,6 +32,8 @@ vim.opt.listchars = {
 }
 
 vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.scrolloff = 5
 
 vim.opt.termguicolors = true
 
@@ -55,3 +57,5 @@ vim.api.nvim_create_autocmd(
 
 vim.o.splitright = true
 vim.opt.fixeol = false
+
+vim.g.have_nerd_font = true
