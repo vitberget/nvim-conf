@@ -7,7 +7,7 @@ return {
             local configs = require("nvim-treesitter.configs")
 
             configs.setup({
-                ensure_installed = { "c", "lua", "query", "javascript", "rust" },
+                ensure_installed = { "lua", "query", "rust" },
                 sync_install = false,
                 auto_install = true,
 
