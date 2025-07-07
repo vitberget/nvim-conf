@@ -5,6 +5,7 @@
 * `git`
 * `xxd`
 * `ripgrep`
+* `fzf`
 
 See (or run) [install-deps.sh](install-deps.sh) for more information.
 
