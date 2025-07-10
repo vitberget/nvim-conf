@@ -100,7 +100,6 @@ return {
             require("nvim-paredit").setup()
         end
     },
-    -- { 'simrat39/symbols-outline.nvim', opts = {} },
     {
         'crispgm/nvim-tabline',
         dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
@@ -120,7 +119,11 @@ return {
         "folke/noice.nvim",
         event = "VeryLazy",
         opts = {
-            -- add any options here
+            lsp = {
+                signature = {
+                    enabled = false,
+                },
+            },
         },
         dependencies = {
             -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
