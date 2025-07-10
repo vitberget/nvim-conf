@@ -17,6 +17,3 @@ vim.api.nvim_create_autocmd('LspAttach', {
         { buffer = args.buf, remap = false, desc = "Rename" })
     end,
 })
-
-vim.lsp.enable('luals')
-
