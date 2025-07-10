@@ -50,4 +50,3 @@ touch pyrightconfig.json
 * <https://github.com/vague2k/vague.nvim>
 * Update everything...
 * folke/lazydev
-* Remove lsp-zero <https://lsp-zero.netlify.app/blog/lsp-config-overview.html>

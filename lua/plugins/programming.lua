@@ -1,14 +1,8 @@
 return {
     { "L3MON4D3/LuaSnip", build = "make install_jsregexp" },
     { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
-    { 'VonHeikemen/lsp-zero.nvim', branch = 'v3.x' },
     { 'neovim/nvim-lspconfig' },
     { "williamboman/mason.nvim", opts = {} },
-    { 'williamboman/mason-lspconfig.nvim', config = function ()
-        require("mason-lspconfig").setup {
-            -- ensure_installed = { "rust_analyzer", "texlab", },
-        }
-    end},
     {"jay-babu/mason-nvim-dap.nvim", config = function ()
         require("mason-nvim-dap").setup({
             ensure_installed = { "codelldb", }
