@@ -37,6 +37,10 @@ export JENKINS_PASSWORD=secret
 touch pyrightconfig.json
 ```
 
+## Help ?
+
+* LSP <https://vonheikemen.github.io/learn-nvim/feature/lsp-setup.html>
+
 ## Consider
 
 * swap-words using more proper nvim lua api
