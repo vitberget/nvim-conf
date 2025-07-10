@@ -8,7 +8,7 @@ local function colorDark(color)
     vim.cmd.colorscheme(color)
 
     vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-    vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" })
+    -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "#555555" })
 
     vim.api.nvim_set_hl(0, "Cursor", { fg="orange", bg="orange" })
     vim.api.nvim_set_hl(0, "Cursor2", { fg="orange", bg="orange" })
