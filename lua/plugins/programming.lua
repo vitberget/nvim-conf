@@ -20,8 +20,9 @@ return {
     {
         'mrcjkb/rustaceanvim',
         version = '^6', -- Recommended
-        lazy = false,
+        lazy = false, -- already lazy
         ft = { 'rust' },
+
     },
     {
         'saecki/crates.nvim',

@@ -54,3 +54,4 @@ touch pyrightconfig.json
 * <https://github.com/vague2k/vague.nvim>
 * Update everything...
 * folke/lazydev
+* Bindings for autocomplete?

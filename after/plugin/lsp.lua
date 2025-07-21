@@ -15,5 +15,14 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
         vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end,
         { buffer = args.buf, remap = false, desc = "Rename" })
+
+        -- Autocompletion
+        local client = vim.lsp.get_client_by_id(args.data.client_id)
+        if client:supports_method('textDocument/completion') then
+            vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = false })
+            vim.keymap.set("i", "<c-m>", function() vim.lsp.completion.get() end,
+            { buffer = args.buf, remap = false, desc = "References" })
+        end
     end,
 })
+
