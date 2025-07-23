@@ -1,5 +1,6 @@
 return {
     'will133/vim-dirdiff',
+    { 'echasnovski/mini.nvim', version = '*' },
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
