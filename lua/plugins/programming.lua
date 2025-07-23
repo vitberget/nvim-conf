@@ -12,8 +12,6 @@ return {
             ensure_installed = { "codelldb", }
         })
     end},
-    { 'hrsh7th/nvim-cmp' },
-    { 'hrsh7th/cmp-nvim-lsp' },
     {
         'mrcjkb/rustaceanvim',
         version = '^6', -- Recommended
@@ -27,15 +25,15 @@ return {
         tag = 'stable',
         config = function()
             require("crates").setup {
-                completion = {
-                    cmp = {
-                        enabled = true
-                    },
-                },
+                -- completion = {
+                --     cmp = {
+                --         enabled = true
+                --     },
+                -- },
             }
-            require('cmp').setup.buffer({
-                sources = { { name = "crates" }}
-            })
+            -- require('cmp').setup.buffer({
+            --     sources = { { name = "crates" }}
+            -- })
         end
     },
     'folke/neodev.nvim',
@@ -47,20 +45,6 @@ return {
     {
         "Olical/conjure",
         ft = { "clojure" },
-        dependencies = {
-            {
-                "PaterJason/cmp-conjure",
-                config = function()
-                    local cmp = require("cmp")
-                    local config = cmp.get_config()
-                    table.insert(config.sources, {
-                        name = "buffer",
-                        option = { sources = { { name = "conjure" }, }, },
-                    })
-                    cmp.setup(config)
-                end,
-            },
-        },
         config = function(_, opts)
             require("conjure.main").main()
             require("conjure.mapping")["on-filetype"]()
