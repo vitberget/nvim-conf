@@ -4,6 +4,9 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end,
         { buffer = args.buf, remap = false, desc = "Go to definition" })
 
+        vim.keymap.set("n", "gD", function() vim.lsp.buf.implementation() end,
+        { buffer = args.buf, remap = false, desc = "Go to implementation" })
+
         vim.keymap.set("n", "<leader>co", function() vim.diagnostic.open_float() end,
         { buffer = args.buf, remap = false, desc = "Diagnostic popup" })
 
