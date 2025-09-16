@@ -34,6 +34,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "<Leader>xp", "\"+p")
 vim.keymap.set("v", "<Leader>xy", "\"+y")
+vim.keymap.set("n", "<Leader>xy", "\"+y")
 
 vim.keymap.set("v", "<Leader>ty", ":w !tmux load-buffer -w -<CR>", {desc="Tmux Yank"})
 vim.keymap.set("n", "<Leader>tp", ":r !tmux save-buffer -<CR>", {desc="Tmux Pull"})
