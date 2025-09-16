@@ -1,3 +1,7 @@
+vim.o.title = true
+vim.o.titlestring = "(path)"
+vim.o.titlestring='%t%( %M%)%( (%{expand("%:~:h")})%)'
+
 vim.opt.tabstop		= 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth	= 4
