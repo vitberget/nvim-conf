@@ -28,4 +28,5 @@ vim.keymap.set("n", "<leader>Rj", ":RustLsp joinLines<CR>" , {desc="Rust join li
 vim.keymap.set("n", "<leader>Rp", ":RustLsp parentModule<CR>", {desc="Rust parent module"} )
 vim.keymap.set("n", "<leader>Ro", ":RustLsp openCargo<CR>", {desc="Rust Open Cargo"} )
 vim.keymap.set("n", "<leader>Rw", ":RustLsp reloadWorkspace<CR>", {desc="Rust reload workspace"} )
-vim.keymap.set("n", "<leader>Rl", ":% !leptosfmt --stdin<CR>", {desc="Leptos format"} )
+vim.keymap.set("n", "<leader>Rb", ":terminal cargo build<CR>", {desc="Cargo build in Nvim terminal"} )
+-- vim.keymap.set("n", "<leader>Rl", ":% !leptosfmt --stdin<CR>", {desc="Leptos format"} )
