@@ -55,4 +55,6 @@ touch pyrightconfig.json
 * Update everything...
 * folke/lazydev
 * Bindings for autocomplete?
-* nvim-dap attach <https://romangeber.com/blog/tech/nvim_rust_debugger>
+* nvim-dap attach 
+    * <https://romangeber.com/blog/tech/nvim_rust_debugger>
+    * <https://github.com/mrcjkb/rustaceanvim#gear-advanced-configuration>
