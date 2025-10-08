@@ -1,6 +1,7 @@
 vim.keymap.set("n", "<leader>dc", ":lua require'dap'.continue()<CR>", {desc="DAP Continue"})
-vim.keymap.set("n", "<leader>dt", ":lua require'dap'.terminate()<CR>", {desc="DAP Terminate"})
-vim.keymap.set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", {desc="DAP breakpoint"})
+vim.keymap.set("n", "<leader>dC", ":lua require'dap'.run_to_cursor()<CR>", {desc="DAP Run to cursor"})
+vim.keymap.set("n", "<leader>dT", ":lua require'dap'.terminate()<CR>", {desc="DAP Terminate"})
+vim.keymap.set("n", "<leader>db", ":lua require'dap'.toggle_breakpoint()<CR>", {desc="DAP Toggle breakpoint"})
 
 vim.keymap.set({'n', 'v'}, '<Leader>dh', function()
     require('dap.ui.widgets').hover()
