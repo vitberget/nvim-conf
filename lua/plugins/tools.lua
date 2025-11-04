@@ -36,7 +36,7 @@ return {
     'mbbill/undotree',
     -- 'tpope/vim-fugitive',
     -- 'airblade/vim-gitgutter',
-    'nvim-tree/nvim-tree.lua',
+    -- 'nvim-tree/nvim-tree.lua',
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
@@ -66,7 +66,7 @@ return {
         end,
         opts = { }
     },
-    { "folke/twilight.nvim", opts = { } },
+    -- { "folke/twilight.nvim", opts = { } },
     'NvChad/nvim-colorizer.lua',
     -- "alexghergh/nvim-tmux-navigation",
     {
@@ -115,7 +115,7 @@ return {
             "nvim-telescope/telescope.nvim", -- optional
         },
     },
-    "mg979/vim-visual-multi",
+    -- "mg979/vim-visual-multi",
     {
         "folke/noice.nvim",
         event = "VeryLazy",
@@ -168,17 +168,17 @@ return {
             'RainbowMultiDelim'
         }
     },
-    {
-        "folke/zen-mode.nvim",
-        opts = {
-            window = {
-                options = {
-                    number = false,
-                    relativenumber = false,
-                }
-            },
-        }
-    },
+    -- {
+    --     "folke/zen-mode.nvim",
+    --     opts = {
+    --         window = {
+    --             options = {
+    --                 number = false,
+    --                 relativenumber = false,
+    --             }
+    --         },
+    --     }
+    -- },
     {
         "ibhagwan/fzf-lua",
         -- optional for icon support
