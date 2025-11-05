@@ -82,17 +82,17 @@ return {
         -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
-    {
-        "folke/zen-mode.nvim",
-        opts = {
-            window = {
-                options = {
-                    number = false,
-                    relativenumber = false,
-                }
-            },
-        }
-    },
+    -- {
+    --     "folke/zen-mode.nvim",
+    --     opts = {
+    --         window = {
+    --             options = {
+    --                 number = false,
+    --                 relativenumber = false,
+    --             }
+    --         },
+    --     }
+    -- },
     {
         "ibhagwan/fzf-lua",
         -- optional for icon support
