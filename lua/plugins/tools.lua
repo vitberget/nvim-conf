@@ -1,6 +1,15 @@
 return {
     'will133/vim-dirdiff',
     { 'echasnovski/mini.nvim', version = '*' },
+    { 'nvim-treesitter/nvim-treesitter-textobjects' },
+    {
+        'Wansmer/treesj',
+        keys = { '<space>m', '<space>j', '<space>s' },
+        dependencies = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
+        config = function()
+            require('treesj').setup({--[[ your config ]]})
+        end,
+    },
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
@@ -16,6 +25,29 @@ return {
                     enable = true,
                     additional_vim_regex_highlighting = true,
                 },
+                textobjects = {
+                    select = {
+                        enable = true,
+                        lookahead= true,
+                        keymaps = {
+                            -- You can use the capture groups defined in textobjects.scm
+                            ["af"] = "@function.outer",
+                            ["if"] = "@function.inner",
+                        },
+                    },
+                    move = {
+                        enable = true,
+                        set_jumps = true,
+                        goto_next_start = {
+                            ["]f"] = "@function.outer",
+                            ["]["] = "@class.outer",
+                        },
+                        goto_previous_start = {
+                            ["[f"] = "@function.outer",
+                            ["[["] = "@class.outer",
+                        },
+                    }
+                }
 
             })
         end
@@ -93,6 +125,9 @@ return {
         opts = { modes = { search = { enabled = false, } } },
         keys = {
             { "<leader>ft", mode = { "n", "x", "o" }, function() require("flash").treesitter() end, desc = "Flash Treesitter" },
+            { "<leader>fT", mode = { "n", "x", "o" }, function() require("flash").treesitter_search() end, desc = "Flash Treesitter Search" },
+            { "<leader>fj", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash Jump" },
+            { "<leader>fr", mode = { "n", "x", "o" }, function() require("flash").remote() end, desc = "Flash Remote" },
         },
     },
     {
