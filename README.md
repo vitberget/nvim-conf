@@ -58,3 +58,4 @@ touch pyrightconfig.json
 * nvim-dap attach 
     * <https://romangeber.com/blog/tech/nvim_rust_debugger>
     * <https://github.com/mrcjkb/rustaceanvim#gear-advanced-configuration>
+* Update nvim-treesitter-textobjects master -> main
