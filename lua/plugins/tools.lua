@@ -33,6 +33,8 @@ return {
                             -- You can use the capture groups defined in textobjects.scm
                             ["af"] = "@function.outer",
                             ["if"] = "@function.inner",
+                            ["az"] = "@block.outer",
+                            ["iz"] = "@block.inner",
                         },
                     },
                     move = {
@@ -40,13 +42,27 @@ return {
                         set_jumps = true,
                         goto_next_start = {
                             ["]f"] = "@function.outer",
+                            ["]F"] = "@function.inner",
                             ["]["] = "@class.outer",
+                            ["]/"] = "@comment.outer",
+                            ["]z"] = "@block.outer",
+                            ["]C"] = "@conditional.outer",
                         },
                         goto_previous_start = {
                             ["[f"] = "@function.outer",
+                            ["[F"] = "@function.inner",
                             ["[["] = "@class.outer",
+                            ["[/"] = "@comment.outer",
+                            ["[z"] = "@block.outer",
+                            ["[C"] = "@conditional.outer",
                         },
-                    }
+                    },
+                    -- swap = {
+                    --     enable = true,
+                    --     swap_next = {
+                    --         ["<leader>sz"] = "@block.inner"
+                    --     }
+                    -- }
                 }
 
             })
