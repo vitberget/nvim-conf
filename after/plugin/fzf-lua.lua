@@ -10,6 +10,12 @@ local fzf = require('fzf-lua')
 
 fzf.register_ui_select()
 
+vim.keymap.set('n', '<leader>to', function ()
+    fzf.oldfiles({
+        cwd_only = true,
+        stat_file = true, -- verify files exist on disk
+    })
+end, { desc = "FZF find oldfiles" })
 vim.keymap.set('n', '<leader>tf', fzf.files, { desc = "FZF find files" })
 vim.keymap.set('n', '<leader>ts', fzf.git_status, { desc = "FZF git status" })
 vim.keymap.set('n', '<leader>tg', fzf.grep, { desc = "FZF git grep" })
