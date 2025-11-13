@@ -4,7 +4,7 @@ OS_ID=$(cat /etc/os-release | grep "^ID")
 
 case "$OS_ID" in
     "ID=arch")      
-        sudo pacman -S git tinyxxd ripgrep fzf
+        sudo pacman -S git tinyxxd ripgrep fzf lua51
         ;;
 
     "ID=debian")
