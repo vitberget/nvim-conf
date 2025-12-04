@@ -43,6 +43,7 @@ touch pyrightconfig.json
 
 ## Consider
 
+* [neotest](https://github.com/nvim-neotest/neotest)
 * swap-words using more proper nvim lua api
 * Other OpenCL highlighting?
 * <https://github.com/nvim-telescope/telescope-dap.nvim>
