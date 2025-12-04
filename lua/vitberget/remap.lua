@@ -34,6 +34,7 @@ vim.keymap.set("i", "<C-c>", "<Esc>")
 
 vim.keymap.set("n", "<Leader>xp", "\"+p")
 vim.keymap.set("v", "<Leader>xy", "\"+y")
+vim.keymap.set("n", "<Leader>xy", "\"+y")
 
 vim.keymap.set("v", "<Leader>ty", ":w !tmux load-buffer -w -<CR>", {desc="Tmux Yank"})
 vim.keymap.set("n", "<Leader>tp", ":r !tmux save-buffer -<CR>", {desc="Tmux Pull"})
@@ -47,3 +48,6 @@ vim.keymap.set("v", "<Leader>S", ":sort<CR>", {desc="Sort"})
 vim.keymap.set("n", "<Leader>S", ":sort<CR>", {desc="Sort"})
 
 vim.keymap.set("n", "<Leader>vr", ":hi Visual term=reverse cterm=reverse gui=reverse<CR>", {desc="Visual Reverse"})
+
+vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
+vim.keymap.set('n', '<Leader>bx', ':bdelete<CR>', { desc = 'Buffer Delete' })

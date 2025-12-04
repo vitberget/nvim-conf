@@ -1,3 +1,7 @@
+vim.o.title = true
+vim.o.titlestring = "(path)"
+vim.o.titlestring='%t%( %M%)%( (%{expand("%:~:h")})%)'
+
 vim.opt.tabstop		= 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth	= 4
@@ -32,6 +36,8 @@ vim.opt.listchars = {
 }
 
 vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.scrolloff = 5
 
 vim.opt.termguicolors = true
 
@@ -55,3 +61,5 @@ vim.api.nvim_create_autocmd(
 
 vim.o.splitright = true
 vim.opt.fixeol = false
+
+vim.g.have_nerd_font = true
