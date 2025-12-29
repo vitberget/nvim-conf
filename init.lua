@@ -1,7 +1,6 @@
 require("vitberget.remap")
 require("vitberget.generic-settings")
 require("vitberget.filetypes")
-require("vitberget.ssh-config")
 
 -- Bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
