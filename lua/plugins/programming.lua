@@ -40,7 +40,6 @@ return {
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
     'mfussenegger/nvim-dap',
     { "klen/nvim-test", opts = {} },
-    -- { 'ckipp01/nvim-jenkinsfile-linter' },
     {
         "Olical/conjure",
         ft = { "clojure" },

@@ -51,3 +51,6 @@ vim.keymap.set("n", "<Leader>vr", ":hi Visual term=reverse cterm=reverse gui=rev
 
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 vim.keymap.set('n', '<Leader>bx', ':bdelete<CR>', { desc = 'Buffer Delete' })
+
+vim.keymap.set('n', '<Leader>ee',  ":s/\\([])}]\\)\\s\\+\\([]})]\\)/\\1\\2/g<CR>", { desc = "Whitespace elimination ends" })
+

@@ -83,17 +83,13 @@ return {
     },
     'nvim-treesitter/playground',
     'mbbill/undotree',
-    -- 'tpope/vim-fugitive',
-    -- 'airblade/vim-gitgutter',
-    -- 'nvim-tree/nvim-tree.lua',
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
         config = true,
-        -- "jiangmiao/auto-pairs",
-        -- config = true,
         opts = {
             disable_in_visualblock = true,
+            enable_check_bracket_line = false,
         },
         keys = {
             { "<leader>at", mode = { "n" }, function() require("nvim-autopairs").toggle() end, desc = "Autopairs Toggle" },
@@ -115,9 +111,7 @@ return {
         end,
         opts = { }
     },
-    -- { "folke/twilight.nvim", opts = { } },
     'NvChad/nvim-colorizer.lua',
-    -- "alexghergh/nvim-tmux-navigation",
     {
         "aserowy/tmux.nvim",
         opts = {
@@ -167,7 +161,6 @@ return {
             "nvim-telescope/telescope.nvim", -- optional
         },
     },
-    -- "mg979/vim-visual-multi",
     {
         "folke/noice.nvim",
         event = "VeryLazy",
@@ -192,13 +185,11 @@ return {
         keys = {
             { "<leader>nd", mode = { "n" }, ":NoiceDismiss<CR>", desc = "NoiceDismiss" },
         },
-        -- vim.keymap.set('n', '<leader>nd', ":NoiceDismiss<CR>" , { desc = "NoiceDismiss" })
     },
     'phelipetls/jsonpath.nvim',
     {
         'stevearc/oil.nvim',
         opts = {},
-        -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
     {
