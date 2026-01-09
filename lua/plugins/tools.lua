@@ -188,6 +188,14 @@ return {
     },
     'phelipetls/jsonpath.nvim',
     {
+        'Einenlum/yaml-revealer',
+        config = function()
+            -- Recommended for Neovim users
+            vim.g.yaml_revealer_display_mode = 'statusline'
+        end,
+        ft = 'yaml',
+    },
+    {
         'stevearc/oil.nvim',
         opts = {},
         dependencies = { "nvim-tree/nvim-web-devicons" },
