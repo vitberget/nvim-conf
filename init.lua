@@ -36,5 +36,3 @@ require("lazy").setup({
   -- automatically check for plugin updates
   -- checker = { enabled = true },
 })
-
-require("vitberget.swap-words")
