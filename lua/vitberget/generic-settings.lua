@@ -44,6 +44,8 @@ vim.opt.termguicolors = true
 vim.opt.updatetime = 50
 vim.opt.colorcolumn = "120"
 
+vim.o.textwidth = 100
+
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
 vim.o.foldenable = false
