@@ -65,3 +65,5 @@ vim.o.splitright = true
 vim.opt.fixeol = false
 
 vim.g.have_nerd_font = true
+
+vim.opt.spelllang = { 'sv', 'en' }        

@@ -15,4 +15,4 @@ end
 
 vim.api.nvim_create_user_command('SwapWords', swapWords, {})
 
-vim.keymap.set('n', "<leader>sw", swapWords, { desc = "Swap words" })
+-- vim.keymap.set('n', "<leader>sw", swapWords, { desc = "Swap words" })

@@ -32,4 +32,6 @@ vim.keymap.set('n', '<leader>td', fzf.lsp_document_symbols, { desc = "FZF docume
 vim.keymap.set('n', '<leader>tq', fzf.quickfix, { desc = "FZF quickfix" })
 vim.keymap.set('n', '<leader>tl', fzf.loclist, { desc = "FZF loclist" })
 vim.keymap.set('n', '<leader>tw', fzf.lsp_live_workspace_symbols, { desc = "FZF workspace symbols" })
+vim.keymap.set('n', '<leader>tz', fzf.spell_suggest, { desc = "FZF spell suggest" })
+vim.keymap.set('n', '<leader>tZ', fzf.spellcheck, { desc = "FZF spellcheck" })
 vim.keymap.set('n', '<leader>tt', ":TodoFzfLua<CR>", { desc = "FZF TODO" })

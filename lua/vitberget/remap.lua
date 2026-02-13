@@ -54,3 +54,29 @@ vim.keymap.set('n', '<Leader>bx', ':bdelete<CR>', { desc = 'Buffer Delete' })
 
 vim.keymap.set('n', '<Leader>ee',  ":s/\\([])}]\\)\\s\\+\\([]})]\\)/\\1\\2/g<CR>", { desc = "Whitespace elimination ends" })
 
+vim.keymap.set(
+    'n', 
+    "<leader>sm", 
+    function ()
+        vim.opt.spelllang = { 'sv', 'en' }        
+    end , 
+    { desc = "Spell lang sv, en" }
+)
+
+vim.keymap.set(
+    'n', 
+    "<leader>ss", 
+    function ()
+        vim.opt.spelllang = { 'sv' }        
+    end , 
+    { desc = "Spell lang sv" }
+)
+
+vim.keymap.set(
+    'n', 
+    "<leader>se", 
+    function ()
+        vim.opt.spelllang = { 'en' }        
+    end , 
+    { desc = "Spell lang en" }
+)
