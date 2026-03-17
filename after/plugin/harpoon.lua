@@ -29,4 +29,4 @@ vim.keymap.set("n", "[h", function() harpoon:list():prev() end, {desc="Harpoon p
 vim.keymap.set("n", "]h", function() harpoon:list():next() end, {desc="Harpoon next"})
 
 require("telescope").load_extension('harpoon')
-vim.keymap.set("n", "<leader>th", ":Telescope harpoon marks<CR>", {desc="Telescope Harpoon"} )
+vim.keymap.set("n", "<leader>tH", ":Telescope harpoon marks<CR>", {desc="Telescope Harpoon"} )
