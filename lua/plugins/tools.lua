@@ -2,7 +2,13 @@ return {
     { 'nfnty/vim-nftables' },
     'will133/vim-dirdiff',
     { 'echasnovski/mini.nvim', version = '*' },
-    { 'nvim-treesitter/nvim-treesitter-textobjects' },
+    { 
+        'nvim-treesitter/nvim-treesitter-textobjects',
+        branch = "main",
+        init = function()
+            vim.g.no_plugin_maps = true
+        end
+    },
     {
         'Wansmer/treesj',
         keys = { '<space>m', '<space>j', '<space>s' },
@@ -13,62 +19,9 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter',
+        lazy = false,
         branch = 'main',
         build = ":TSUpdate",
-        -- config = function ()
-        --     local configs = require("nvim-treesitter.configs")
-        --
-        --     configs.setup({
-        --         ensure_installed = { "lua", "query", "rust" },
-        --         sync_install = false,
-        --         auto_install = true,
-        --
-        --         highlight = {
-        --             enable = true,
-        --             additional_vim_regex_highlighting = true,
-        --         },
-        --         textobjects = {
-        --             select = {
-        --                 enable = true,
-        --                 lookahead= true,
-        --                 keymaps = {
-        --                     -- You can use the capture groups defined in textobjects.scm
-        --                     ["af"] = "@function.outer",
-        --                     ["if"] = "@function.inner",
-        --                     ["az"] = "@block.outer",
-        --                     ["iz"] = "@block.inner",
-        --                 },
-        --             },
-        --             move = {
-        --                 enable = true,
-        --                 set_jumps = true,
-        --                 goto_next_start = {
-        --                     ["]f"] = "@function.outer",
-        --                     ["]F"] = "@function.inner",
-        --                     ["]["] = "@class.outer",
-        --                     ["]/"] = "@comment.outer",
-        --                     ["]z"] = "@block.outer",
-        --                     ["]C"] = "@conditional.outer",
-        --                 },
-        --                 goto_previous_start = {
-        --                     ["[f"] = "@function.outer",
-        --                     ["[F"] = "@function.inner",
-        --                     ["[["] = "@class.outer",
-        --                     ["[/"] = "@comment.outer",
-        --                     ["[z"] = "@block.outer",
-        --                     ["[C"] = "@conditional.outer",
-        --                 },
-        --             },
-        --             -- swap = {
-        --             --     enable = true,
-        --             --     swap_next = {
-        --             --         ["<leader>sz"] = "@block.inner"
-        --             --     }
-        --             -- }
-        --         }
-        --
-        --     })
-        -- end
     },
     {
         'chomosuke/typst-preview.nvim',
