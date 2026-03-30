@@ -1,3 +1,5 @@
+-- https://github.com/nvim-treesitter/nvim-treesitter-textobjects
+
 require("nvim-treesitter-textobjects").setup {
   select = {
     -- Automatically jump forward to textobj, similar to targets.vim
