@@ -13,6 +13,7 @@ return {
     },
     {
         'nvim-treesitter/nvim-treesitter',
+        branch = 'main',
         build = ":TSUpdate",
         -- config = function ()
         --     local configs = require("nvim-treesitter.configs")
@@ -81,7 +82,7 @@ return {
             require("nvim-ts-autotag").setup()
         end,
     },
-    -- 'nvim-treesitter/playground',
+    -- 'nvim-treesitter/playground', TODO fix treesitter/playground?
     'mbbill/undotree',
     {
         'windwp/nvim-autopairs',
