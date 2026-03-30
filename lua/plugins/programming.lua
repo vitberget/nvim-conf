@@ -39,7 +39,7 @@ return {
     'folke/neodev.nvim',
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
     'mfussenegger/nvim-dap',
-    { "klen/nvim-test", opts = {} },
+    -- { "klen/nvim-test", opts = {} },
     {
         "Olical/conjure",
         ft = { "clojure" },

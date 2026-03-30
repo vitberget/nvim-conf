@@ -14,60 +14,60 @@ return {
     {
         'nvim-treesitter/nvim-treesitter',
         build = ":TSUpdate",
-        config = function ()
-            local configs = require("nvim-treesitter.configs")
-
-            configs.setup({
-                ensure_installed = { "lua", "query", "rust" },
-                sync_install = false,
-                auto_install = true,
-
-                highlight = {
-                    enable = true,
-                    additional_vim_regex_highlighting = true,
-                },
-                textobjects = {
-                    select = {
-                        enable = true,
-                        lookahead= true,
-                        keymaps = {
-                            -- You can use the capture groups defined in textobjects.scm
-                            ["af"] = "@function.outer",
-                            ["if"] = "@function.inner",
-                            ["az"] = "@block.outer",
-                            ["iz"] = "@block.inner",
-                        },
-                    },
-                    move = {
-                        enable = true,
-                        set_jumps = true,
-                        goto_next_start = {
-                            ["]f"] = "@function.outer",
-                            ["]F"] = "@function.inner",
-                            ["]["] = "@class.outer",
-                            ["]/"] = "@comment.outer",
-                            ["]z"] = "@block.outer",
-                            ["]C"] = "@conditional.outer",
-                        },
-                        goto_previous_start = {
-                            ["[f"] = "@function.outer",
-                            ["[F"] = "@function.inner",
-                            ["[["] = "@class.outer",
-                            ["[/"] = "@comment.outer",
-                            ["[z"] = "@block.outer",
-                            ["[C"] = "@conditional.outer",
-                        },
-                    },
-                    -- swap = {
-                    --     enable = true,
-                    --     swap_next = {
-                    --         ["<leader>sz"] = "@block.inner"
-                    --     }
-                    -- }
-                }
-
-            })
-        end
+        -- config = function ()
+        --     local configs = require("nvim-treesitter.configs")
+        --
+        --     configs.setup({
+        --         ensure_installed = { "lua", "query", "rust" },
+        --         sync_install = false,
+        --         auto_install = true,
+        --
+        --         highlight = {
+        --             enable = true,
+        --             additional_vim_regex_highlighting = true,
+        --         },
+        --         textobjects = {
+        --             select = {
+        --                 enable = true,
+        --                 lookahead= true,
+        --                 keymaps = {
+        --                     -- You can use the capture groups defined in textobjects.scm
+        --                     ["af"] = "@function.outer",
+        --                     ["if"] = "@function.inner",
+        --                     ["az"] = "@block.outer",
+        --                     ["iz"] = "@block.inner",
+        --                 },
+        --             },
+        --             move = {
+        --                 enable = true,
+        --                 set_jumps = true,
+        --                 goto_next_start = {
+        --                     ["]f"] = "@function.outer",
+        --                     ["]F"] = "@function.inner",
+        --                     ["]["] = "@class.outer",
+        --                     ["]/"] = "@comment.outer",
+        --                     ["]z"] = "@block.outer",
+        --                     ["]C"] = "@conditional.outer",
+        --                 },
+        --                 goto_previous_start = {
+        --                     ["[f"] = "@function.outer",
+        --                     ["[F"] = "@function.inner",
+        --                     ["[["] = "@class.outer",
+        --                     ["[/"] = "@comment.outer",
+        --                     ["[z"] = "@block.outer",
+        --                     ["[C"] = "@conditional.outer",
+        --                 },
+        --             },
+        --             -- swap = {
+        --             --     enable = true,
+        --             --     swap_next = {
+        --             --         ["<leader>sz"] = "@block.inner"
+        --             --     }
+        --             -- }
+        --         }
+        --
+        --     })
+        -- end
     },
     {
         'chomosuke/typst-preview.nvim',
@@ -81,7 +81,7 @@ return {
             require("nvim-ts-autotag").setup()
         end,
     },
-    'nvim-treesitter/playground',
+    -- 'nvim-treesitter/playground',
     'mbbill/undotree',
     {
         'windwp/nvim-autopairs',
