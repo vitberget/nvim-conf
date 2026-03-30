@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'lua' },
+  pattern = { 'rust' },
   callback = function() vim.treesitter.start() end,
 })
 
