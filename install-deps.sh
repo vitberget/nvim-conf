@@ -14,3 +14,5 @@ case "$OS_ID" in
     *)              
         echo "Unknown os ${OS_ID}, don't know what to do."
 esac
+
+echo "You should: cargo install tree-sitter-cli"

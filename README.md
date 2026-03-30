@@ -6,6 +6,7 @@
 * `xxd`
 * `ripgrep`
 * `fzf`
+* `cargo install tree-sitter-cli`
 
 See (or run) [install-deps.sh](install-deps.sh) for more information.
 
