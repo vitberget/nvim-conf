@@ -1,4 +1,5 @@
 return {
+    { 'glacambre/firenvim', build = ":call firenvim#install(0)" },
     { 'nfnty/vim-nftables' },
     'will133/vim-dirdiff',
     { 'echasnovski/mini.nvim', version = '*' },
