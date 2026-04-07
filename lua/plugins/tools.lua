@@ -79,10 +79,10 @@ return {
             }
         },
         keys = {
-            { "<C-w>h", mode = {"n"}, function () require("tmux").move_left() end, desc = "Navigate left" },
-            { "<C-w>j", mode = {"n"}, function () require("tmux").move_bottom() end, desc = "Navigate down" },
-            { "<C-w>k", mode = {"n"}, function () require("tmux").move_top() end, desc = "Navigate up" },
-            { "<C-w>l", mode = {"n"}, function () require("tmux").move_right() end, desc = "Navigate right" },
+            { "<C-w>h", mode = {"n","i","v"}, function () require("tmux").move_left() end, desc = "Navigate left" },
+            { "<C-w>j", mode = {"n","i","v"}, function () require("tmux").move_bottom() end, desc = "Navigate down" },
+            { "<C-w>k", mode = {"n","i","v"}, function () require("tmux").move_top() end, desc = "Navigate up" },
+            { "<C-w>l", mode = {"n","i","v"}, function () require("tmux").move_right() end, desc = "Navigate right" },
         },
     },
     {
