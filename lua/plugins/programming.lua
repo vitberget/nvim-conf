@@ -52,17 +52,18 @@ return {
             -- vim.g["conjure#debug"] = true
         end,
     },
-    {
-        'nvimtools/none-ls.nvim',
-        config = function ()
-            local null_ls = require("null-ls")
-            null_ls.setup({
-                sources = {
-                    -- null_ls.builtins.code_actions.gitsigns,
-                },
-            })
-        end
-    },
+    -- {
+    --     -- Remove none-ls / nulls-ls ?
+    --     'nvimtools/none-ls.nvim',
+    --     config = function ()
+    --         local null_ls = require("null-ls")
+    --         null_ls.setup({
+    --             sources = {
+    --                 -- null_ls.builtins.code_actions.gitsigns,
+    --             },
+    --         })
+    --     end
+    -- },
     { 'lewis6991/gitsigns.nvim', opts = {} },
     'brgmnn/vim-opencl',
 }

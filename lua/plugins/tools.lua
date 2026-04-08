@@ -23,6 +23,20 @@ return {
         lazy = false,
         branch = 'main',
         build = ":TSUpdate",
+
+        init = function ()
+            vim.api.nvim_create_autocmd('FileType', { 
+                callback = function() 
+                    -- Enable treesitter highlighting and disable regex syntax
+                    pcall(vim.treesitter.start) 
+                    -- Enable treesitter-based indentation
+                    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" 
+
+                    vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
+                    vim.wo[0][0].foldmethod = 'expr'
+                end, 
+            })
+        end
     },
     {
         'chomosuke/typst-preview.nvim',
@@ -174,17 +188,6 @@ return {
             'RainbowMultiDelim'
         }
     },
-    -- {
-    --     "folke/zen-mode.nvim",
-    --     opts = {
-    --         window = {
-    --             options = {
-    --                 number = false,
-    --                 relativenumber = false,
-    --             }
-    --         },
-    --     }
-    -- },
     {
         "ibhagwan/fzf-lua",
         -- optional for icon support
