@@ -6,7 +6,7 @@
 * `xxd`
 * `ripgrep`
 * `fzf`
-* `cargo install tree-sitter-cli`
+* `tree-sitter-cli` (`cargo install tree-sitter-cli`)
 
 See (or run) [install-deps.sh](install-deps.sh) for more information.
 
@@ -23,14 +23,6 @@ bind-key -Ttable1 'k' select-pane -U
 bind-key -Ttable1 'l' select-pane -R
 ```
 
-## Jenkins linter conf
-
-```sh
-export JENKINS_URL=https://my.jenkins.hostname/
-export JENKINS_USER_ID=jenkins_user
-export JENKINS_PASSWORD=secret
-```
-
 ## Python / pyright - multifile
 
 ```sh
@@ -45,7 +37,6 @@ touch pyrightconfig.json
 ## Consider
 
 * [neotest](https://github.com/nvim-neotest/neotest)
-* swap-words using more proper nvim lua api
 * Other OpenCL highlighting?
 * <https://github.com/nvim-telescope/telescope-dap.nvim>
 * <https://github.com/camgraff/telescope-tmux.nvim>
@@ -60,4 +51,3 @@ touch pyrightconfig.json
 * nvim-dap attach 
     * <https://romangeber.com/blog/tech/nvim_rust_debugger>
     * <https://github.com/mrcjkb/rustaceanvim#gear-advanced-configuration>
-* Update nvim-treesitter-textobjects master -> main
