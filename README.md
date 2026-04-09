@@ -61,3 +61,4 @@ touch pyrightconfig.json
     * <https://romangeber.com/blog/tech/nvim_rust_debugger>
     * <https://github.com/mrcjkb/rustaceanvim#gear-advanced-configuration>
 * Update nvim-treesitter-textobjects master -> main
+* <https://github.com/Hessesian/kotlin-lsp>
