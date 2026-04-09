@@ -4,15 +4,23 @@ OS_ID=$(cat /etc/os-release | grep "^ID")
 
 case "$OS_ID" in
     "ID=arch")      
-        sudo pacman -S git tinyxxd ripgrep fzf lua51
+        sudo pacman -S      git \
+                            tinyxxd \
+                            ripgrep \
+                            fzf \
+                            lua51 \
+                            tree-sitter-cli
         ;;
 
     "ID=debian")
-        sudo apt install git xxd ripgrep fzf
+        sudo apt install    git \
+                            xxd \
+                            ripgrep \
+                            fzf
+        echo "You should: cargo install tree-sitter-cli"
         ;;
 
     *)              
         echo "Unknown os ${OS_ID}, don't know what to do."
 esac
 
-echo "You should: cargo install tree-sitter-cli"
