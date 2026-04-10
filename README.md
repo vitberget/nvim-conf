@@ -38,7 +38,6 @@ touch pyrightconfig.json
 
 * [neotest](https://github.com/nvim-neotest/neotest)
 * Other OpenCL highlighting?
-* <https://github.com/nvim-telescope/telescope-dap.nvim>
 * <https://github.com/camgraff/telescope-tmux.nvim>
 * dadbod
 * <https://github.com/t-troebst/perfanno.nvim>
@@ -47,7 +46,11 @@ touch pyrightconfig.json
 * Update everything...
 * folke/lazydev
 * Bindings for autocomplete?
-* nvim-dap attach 
-    * <https://romangeber.com/blog/tech/nvim_rust_debugger>
-    * <https://github.com/mrcjkb/rustaceanvim#gear-advanced-configuration>
+* DAP things
+    * nvim-dap attach 
+        * <https://romangeber.com/blog/tech/nvim_rust_debugger>
+        * <https://github.com/mrcjkb/rustaceanvim#gear-advanced-configuration>
+    * <https://github.com/nvim-telescope/telescope-dap.nvim>
 * <https://github.com/Hessesian/kotlin-lsp>
+* See how the nvim-treesitter drama unfolds
+    * Possible replacment <https://github.com/neovim-treesitter/nvim-treesitter>
