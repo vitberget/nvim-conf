@@ -3,7 +3,7 @@ return {
     { 'nfnty/vim-nftables' },
     'will133/vim-dirdiff',
     { 'echasnovski/mini.nvim', version = '*' },
-    { 
+    {
         'nvim-treesitter/nvim-treesitter-textobjects',
         branch = "main",
         init = function()
