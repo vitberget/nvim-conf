@@ -1,4 +1,4 @@
-  vim.api.nvim_create_autocmd(
+vim.api.nvim_create_autocmd(
     {"BufNewFile", "BufRead"},
     {
         pattern = "*.opencl",
@@ -8,7 +8,7 @@
         end
     })
 
-  vim.api.nvim_create_autocmd(
+vim.api.nvim_create_autocmd(
     {"BufNewFile", "BufRead"},
     {
         pattern = "*.service",
@@ -18,7 +18,7 @@
         end
     })
 
-  vim.api.nvim_create_autocmd(
+vim.api.nvim_create_autocmd(
     {"BufNewFile", "BufRead"},
     {
         pattern = "*.simconf",
@@ -32,6 +32,9 @@ vim.api.nvim_create_autocmd(
     {'BufRead', 'BufNewFile'}, 
     {
         desc = 'Set filetype for SSH config directory',
-        pattern = '*/.ssh/config.d/*',
-        command = 'set filetype=sshconfig'
+        pattern = '*.sshconfig',
+        callback = function ()
+            local buf = vim.api.nvim_get_current_buf()
+            vim.api.nvim_set_option_value("filetype", "sshconfig", {buf = buf})
+        end
     })
