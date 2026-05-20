@@ -39,9 +39,6 @@ vim.keymap.set("n", "<Leader>xy", "\"+y")
 vim.keymap.set("v", "<Leader>ty", ":w !tmux load-buffer -w -<CR>", {desc="Tmux Yank"})
 vim.keymap.set("n", "<Leader>tp", ":r !tmux save-buffer -<CR>", {desc="Tmux Pull"})
 
-vim.keymap.set("n", "<Leader>cc", ":w! | !~/.config/nvim/vim-compiler/vim-compiler <c-r>%<CR><CR>", {desc="My Compile"})
-vim.keymap.set("n", "<Leader>cp", ":!~/.config/nvim/vim-compiler/vim-view-file <c-r>%<CR><CR>", {desc="My Preview"})
-
 vim.keymap.set("n", "<Leader>T", ":tabnew<CR>", {desc="New tab"})
 
 vim.keymap.set("v", "<Leader>S", ":sort<CR>", {desc="Sort"})
