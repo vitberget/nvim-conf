@@ -52,7 +52,3 @@ touch pyrightconfig.json
         * <https://github.com/mrcjkb/rustaceanvim#gear-advanced-configuration>
     * <https://github.com/nvim-telescope/telescope-dap.nvim>
 * <https://github.com/Hessesian/kotlin-lsp>
-* See how the nvim-treesitter drama unfolds
-    * Possible replacment 
-        * <https://github.com/neovim-treesitter/nvim-treesitter>
-        * <https://github.com/romus204/tree-sitter-manager.nvim?tab=readme-ov-file>

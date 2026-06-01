@@ -1,8 +1,12 @@
 return {
     { 'glacambre/firenvim', build = ":call firenvim#install(0)" },
     { 'nfnty/vim-nftables' },
-    'will133/vim-dirdiff',
+    { 'will133/vim-dirdiff' },
     { 'echasnovski/mini.nvim', version = '*' },
+    {
+        "https://github.com/arborist-ts/arborist.nvim",
+        opts = { update_cadence = "daily" }
+    },
     {
         'nvim-treesitter/nvim-treesitter-textobjects',
         branch = "main",
@@ -13,30 +17,10 @@ return {
     {
         'Wansmer/treesj',
         keys = { '<space>m', '<space>j', '<space>s' },
-        dependencies = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
+        -- dependencies = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
         config = function()
             require('treesj').setup({--[[ your config ]]})
         end,
-    },
-    {
-        'nvim-treesitter/nvim-treesitter',
-        lazy = false,
-        branch = 'main',
-        build = ":TSUpdate",
-
-        init = function ()
-            vim.api.nvim_create_autocmd('FileType', { 
-                callback = function() 
-                    -- Enable treesitter highlighting and disable regex syntax
-                    pcall(vim.treesitter.start) 
-                    -- Enable treesitter-based indentation
-                    vim.bo.indentexpr = "v:lua.require'nvim-treesitter'.indentexpr()" 
-
-                    vim.wo[0][0].foldexpr = 'v:lua.vim.treesitter.foldexpr()'
-                    vim.wo[0][0].foldmethod = 'expr'
-                end, 
-            })
-        end
     },
     {
         'chomosuke/typst-preview.nvim',
@@ -51,7 +35,7 @@ return {
             require("nvim-ts-autotag").setup()
         end,
     },
-    'mbbill/undotree',
+    { 'mbbill/undotree' },
     {
         'windwp/nvim-autopairs',
         event = "InsertEnter",
@@ -66,11 +50,11 @@ return {
             { "<leader>ad", mode = { "n" }, function() require("nvim-autopairs").disable() end, desc = "Autopairs Disable" },
         },
     },
-    "easymotion/vim-easymotion",
-    "tpope/vim-surround",
-    "tpope/vim-abolish",
-    "mattn/emmet-vim",
-    'lambdalisue/suda.vim',
+    { "easymotion/vim-easymotion" },
+    { "tpope/vim-surround" },
+    { "tpope/vim-abolish" },
+    { "mattn/emmet-vim" },
+    { 'lambdalisue/suda.vim' },
     {
         "folke/which-key.nvim",
         event = "VeryLazy",
@@ -80,7 +64,7 @@ return {
         end,
         opts = { }
     },
-    'NvChad/nvim-colorizer.lua',
+    { 'NvChad/nvim-colorizer.lua' },
     {
         "aserowy/tmux.nvim",
         opts = {
@@ -121,12 +105,11 @@ return {
         dependencies = { 'nvim-tree/nvim-web-devicons' }, -- optional
         config = true,
     },
-    'RaafatTurki/hex.nvim',
+    { 'RaafatTurki/hex.nvim' },
     {
         "cuducos/yaml.nvim",
         ft = { "yaml" }, -- optional
         dependencies = {
-            "nvim-treesitter/nvim-treesitter",
             "nvim-telescope/telescope.nvim", -- optional
         },
     },
@@ -155,7 +138,7 @@ return {
             { "<leader>nd", mode = { "n" }, ":NoiceDismiss<CR>", desc = "NoiceDismiss" },
         },
     },
-    'phelipetls/jsonpath.nvim',
+    { 'phelipetls/jsonpath.nvim' },
     {
         'Einenlum/yaml-revealer',
         config = function()
