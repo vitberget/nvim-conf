@@ -17,14 +17,12 @@ return {
     {
         'Wansmer/treesj',
         keys = { '<space>m', '<space>j', '<space>s' },
-        -- dependencies = { 'nvim-treesitter/nvim-treesitter' }, -- if you install parsers with `nvim-treesitter`
         config = function()
             require('treesj').setup({--[[ your config ]]})
         end,
     },
     {
         'chomosuke/typst-preview.nvim',
-        -- lazy = false, -- or ft = 'typst'
         ft = 'typst',
         version = '1.*',
         opts = {}, -- lazy.nvim will implicitly calls `setup {}`
@@ -53,7 +51,10 @@ return {
     { "easymotion/vim-easymotion" },
     { "tpope/vim-surround" },
     { "tpope/vim-abolish" },
-    { "mattn/emmet-vim" },
+    {
+        "mattn/emmet-vim",
+        ft = "html"
+    },
     { 'lambdalisue/suda.vim' },
     {
         "folke/which-key.nvim",
@@ -117,9 +118,6 @@ return {
         "folke/noice.nvim",
         event = "VeryLazy",
         opts = {
-            -- presets = {
-            --     lsp_doc_border = true,
-            -- },
             lsp = {
                 signature = {
                     enabled = false,
@@ -138,7 +136,10 @@ return {
             { "<leader>nd", mode = { "n" }, ":NoiceDismiss<CR>", desc = "NoiceDismiss" },
         },
     },
-    { 'phelipetls/jsonpath.nvim' },
+    {
+        'phelipetls/jsonpath.nvim',
+        ft = "json"
+    },
     {
         'Einenlum/yaml-revealer',
         config = function()
@@ -173,10 +174,7 @@ return {
     },
     {
         "ibhagwan/fzf-lua",
-        -- optional for icon support
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        -- or if using mini.icons/mini.nvim
-        -- dependencies = { "echasnovski/mini.icons" },
         opts = { }
     },
     {

@@ -3,9 +3,7 @@ return {
     { 'neovim/nvim-lspconfig' },
     { "williamboman/mason.nvim", opts = {} },
     { 'williamboman/mason-lspconfig.nvim', config = function ()
-        require("mason-lspconfig").setup {
-            -- ensure_installed = { "rust_analyzer", "texlab", },
-        }
+        require("mason-lspconfig").setup { }
     end},
     {"jay-babu/mason-nvim-dap.nvim", config = function ()
         require("mason-nvim-dap").setup({
@@ -25,21 +23,12 @@ return {
         tag = 'stable',
         config = function()
             require("crates").setup {
-                -- completion = {
-                --     cmp = {
-                --         enabled = true
-                --     },
-                -- },
             }
-            -- require('cmp').setup.buffer({
-            --     sources = { { name = "crates" }}
-            -- })
         end
     },
-    'folke/neodev.nvim',
+    { 'folke/neodev.nvim' },
     { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
-    'mfussenegger/nvim-dap',
-    -- { "klen/nvim-test", opts = {} }, TODO fix nvim-test?
+    { 'mfussenegger/nvim-dap' },
     {
         "Olical/conjure",
         ft = { "clojure" },
@@ -48,22 +37,11 @@ return {
             require("conjure.mapping")["on-filetype"]()
         end,
         init = function()
-            -- Set configuration options here
-            -- vim.g["conjure#debug"] = true
         end,
     },
-    -- {
-    --     -- Remove none-ls / nulls-ls ?
-    --     'nvimtools/none-ls.nvim',
-    --     config = function ()
-    --         local null_ls = require("null-ls")
-    --         null_ls.setup({
-    --             sources = {
-    --                 -- null_ls.builtins.code_actions.gitsigns,
-    --             },
-    --         })
-    --     end
-    -- },
     { 'lewis6991/gitsigns.nvim', opts = {} },
-    'brgmnn/vim-opencl',
+    {
+        'brgmnn/vim-opencl',
+        ft = "opencl"
+    },
 }
