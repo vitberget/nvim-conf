@@ -1,22 +1,7 @@
 return {
     {
-        'nvim-treesitter/nvim-treesitter',
-        build = ":TSUpdate",
-        config = function ()
-            local configs = require("nvim-treesitter.configs")
-
-            configs.setup({
-                ensure_installed = { "lua", "query", "rust" },
-                sync_install = false,
-                auto_install = true,
-
-                highlight = {
-                    enable = true,
-                    additional_vim_regex_highlighting = true,
-                },
-
-            })
-        end
+        "https://github.com/arborist-ts/arborist.nvim",
+        opts = { update_cadence = "daily" }
     },
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
@@ -64,41 +49,20 @@ return {
     {
         "folke/noice.nvim",
         event = "VeryLazy",
-        opts = {
-            -- add any options here
-        },
+        opts = { },
         dependencies = {
-            -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
             "MunifTanjim/nui.nvim",
-            -- OPTIONAL:
-            --   `nvim-notify` is only needed, if you want to use the notification view.
-            --   If not available, we use `mini` as the fallback
             "rcarriga/nvim-notify",
         }
     },
     {
         'stevearc/oil.nvim',
         opts = {},
-        -- Optional dependencies
         dependencies = { "nvim-tree/nvim-web-devicons" },
     },
-    -- {
-    --     "folke/zen-mode.nvim",
-    --     opts = {
-    --         window = {
-    --             options = {
-    --                 number = false,
-    --                 relativenumber = false,
-    --             }
-    --         },
-    --     }
-    -- },
     {
         "ibhagwan/fzf-lua",
-        -- optional for icon support
         dependencies = { "nvim-tree/nvim-web-devicons" },
-        -- or if using mini.icons/mini.nvim
-        -- dependencies = { "echasnovski/mini.icons" },
         opts = { }
     },
 }
