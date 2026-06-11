@@ -5,7 +5,10 @@ return {
     { 'echasnovski/mini.nvim', version = '*' },
     {
         "https://github.com/arborist-ts/arborist.nvim",
-        opts = { update_cadence = "daily" }
+        opts = { 
+            update_cadence = "daily",
+            install_popular = false
+        }
     },
     {
         'nvim-treesitter/nvim-treesitter-textobjects',
