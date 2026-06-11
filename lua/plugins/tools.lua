@@ -1,7 +1,10 @@
 return {
     {
         "https://github.com/arborist-ts/arborist.nvim",
-        opts = { update_cadence = "daily" }
+        opts = {
+            update_cadence = "daily",
+            install_popular = false
+        }
     },
     "easymotion/vim-easymotion",
     "tpope/vim-surround",
