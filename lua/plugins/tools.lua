@@ -5,7 +5,7 @@ return {
     { 'echasnovski/mini.nvim', version = '*' },
     {
         "https://github.com/arborist-ts/arborist.nvim",
-        opts = { 
+        opts = {
             update_cadence = "daily",
             install_popular = false
         }
