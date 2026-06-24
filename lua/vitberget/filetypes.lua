@@ -38,3 +38,9 @@ vim.api.nvim_create_autocmd(
             vim.api.nvim_set_option_value("filetype", "sshconfig", {buf = buf})
         end
     })
+
+vim.filetype.add({
+  extension = {
+    hujson = "jsonc",
+  },
+})
