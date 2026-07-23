@@ -1,3 +1,10 @@
+local function stringColor()
+    vim.api.nvim_set_hl(0, "String", { fg="#999999" })
+    -- vim.api.nvim_get_hl_by_name("variable", {})
+    vim.api.nvim_set_hl(0, "@lsp.type.variable", { fg="#ffffff" })
+end
+
+
 local function colorDark(color)
     if color==nil or color=='' then
         color = "rose-pine"
@@ -16,6 +23,10 @@ local function colorDark(color)
 
     -- vim.opt.nvim_set_hl(0, "TabLine", { fg="#bbbbbb", bg="#111111" })
     vim.opt.guicursor = "n-v-c:block-Cursor/lCursor,i-ci-ve:ver25-Cursor2/lCursor2,r-cr:hor20,o:hor50"
+
+    if color == "rose-pine" then
+        stringColor()
+    end
 end
 
 
@@ -42,13 +53,6 @@ local function colorLight(color)
 end
 
 
-local function string_color()
-    vim.api.nvim_set_hl(0, "String", { fg="#999999" })
-    -- vim.api.nvim_get_hl_by_name("variable", {})
-    vim.api.nvim_set_hl(0, "@lsp.type.variable", { fg="#ffffff" })
-end
-
-
 vim.api.nvim_create_user_command( 'ColorDark',
 function (opts)
     colorDark(opts.args)
@@ -64,14 +68,9 @@ end,
 { nargs = '?' })
 
 
-vim.api.nvim_create_user_command( 'ColorString',
-function ()
-    string_color()
-end, {})
+vim.api.nvim_create_user_command( 'ColorString', stringColor, {})
+vim.api.nvim_create_user_command('ColorTablineDark', colorTabLineDark, {})
 
 
 colorDark()
 colorTabLineDark()
-
-
-vim.api.nvim_create_user_command('ColorTablineDark', colorTabLineDark, {})
