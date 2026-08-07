@@ -53,3 +53,4 @@ touch pyrightconfig.json
     * <https://github.com/nvim-telescope/telescope-dap.nvim>
 * <https://github.com/Hessesian/kotlin-lsp>
 * <https://neovimcraft.com/plugin/iamironz/android-nvim-plugin/>
+* <https://github.com/CoreyKaylor/diffbandit.nvim>
