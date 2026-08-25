@@ -44,4 +44,15 @@ return {
         'brgmnn/vim-opencl',
         ft = "opencl"
     },
+    {
+        "qvalentin/helm-ls.nvim",
+        ft = "helm",
+        opts = {
+            conceal_templates = {
+                -- enable the replacement of templates with virtual text of their current values
+                -- note: for better wrapping support, set `vim.opt.conceallevel = 2`
+                enabled = false, -- this might change to false in the future
+            },
+        },
+    }
 }
