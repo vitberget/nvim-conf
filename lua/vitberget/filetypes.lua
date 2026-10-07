@@ -44,3 +44,13 @@ vim.filetype.add({
     hujson = "jsonc",
   },
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "svg",
+  callback = function()
+    vim.lsp.start({
+      name = "svg-language-server",
+      cmd = { vim.env.HOME .. "/.cargo/bin/svg-language-server", "--stdio" },
+    })
+  end,
+})

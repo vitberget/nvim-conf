@@ -30,6 +30,14 @@ bind-key -Ttable1 'l' select-pane -R
 touch pyrightconfig.json
 ```
 
+## SVG
+
+```sh
+cargo install svg-language-server
+cargo install svg-lint
+cargo install svg-format
+```
+
 ## Help ?
 
 * LSP <https://vonheikemen.github.io/learn-nvim/feature/lsp-setup.html>
