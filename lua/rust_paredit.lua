@@ -2,6 +2,8 @@
 --
 --   :RustSlurp  [count]  pull the next statement(s) into the block   (>})
 --   :RustBarf   [count]  push the last statement(s) out of the block (<})
+--   :RustSlurpBack [count]  pull the previous statement(s) into the block (<{)
+--   :RustBarfBack  [count]  push the first statement(s) out before it   (>{)
 --
 -- Requires the Tree-sitter "rust" parser (e.g. :TSInstall rust).
 -- Usage:  require("rust_paredit").setup()
@@ -12,7 +14,7 @@ local api = vim.api
 local ns = api.nvim_create_namespace("rust_paredit")
 
 M.config = {
-  keymaps = { slurp = ">}", barf = "<}" }, -- set to false to skip mappings
+  keymaps = { slurp = ">}", barf = "<}", slurp_back = "<{", barf_back = ">{" }, -- set to false to skip mappings
   reindent = true,                          -- run `=` over the touched code
 }
 
@@ -127,6 +129,8 @@ local function reindent(buf, mark)
   if not block then return end
   local stmt = statement_of(block)
   local sr = stmt:start()
+  local prev = stmt:prev_named_sibling()
+  if prev then sr = prev:start() end
   local er = stmt:end_()
   local nxt = stmt:next_named_sibling()
   if nxt then er = nxt:end_() end
@@ -196,6 +200,63 @@ local function barf_once(buf, block)
   return true
 end
 
+-- Previous statement item before `node` (including a comment trailing it on
+-- the same line). Returns first, last nodes.
+local function prev_item(node)
+  local last = node:prev_named_sibling()
+  if not last then return nil end
+  local first = last
+  while is_comment(first) do
+    local p = first:prev_named_sibling()
+    if p and select(1, p:end_()) == first:start() then first = p else break end
+  end
+  return first, last
+end
+
+local function text_of(buf, first, last)
+  local sr, sc = first:start()
+  local er, ec = last:end_()
+  return api.nvim_buf_get_text(buf, sr, sc, er, ec, {}), { sr, sc, er, ec }
+end
+
+local function slurp_back_once(buf, block)
+  local open = block:child(0)
+  if not open or open:type() ~= "{" then return false, "block has no opening brace" end
+  local stmt = statement_of(block)
+  local first, last = prev_item(stmt)
+  if not first then return false, "nothing to slurp backward" end
+  if select(1, last:end_()) == stmt:start() then
+    return false, "previous statement is on the same line"
+  end
+
+  local text, r = text_of(buf, first, last)
+  local _, _, oer, oec = open:range()
+
+  -- Insert after `{` first (later in buffer), then delete the original.
+  local lines = { "" }
+  vim.list_extend(lines, text)
+  api.nvim_buf_set_text(buf, oer, oec, oer, oec, lines)
+  delete_range(buf, r[1], r[2], r[3], r[4])
+  return true
+end
+
+local function barf_back_once(buf, block)
+  local item = block:named_child(0)
+  if not item then return false, "nothing to barf backward" end
+  local last = with_trailing_comments(item)
+  local stmt = statement_of(block)
+
+  local text, r = text_of(buf, item, last)
+  local sr = stmt:start()
+  local indent = line(buf, sr):match("^%s*")
+  text[1] = indent .. text[1]
+
+  -- Delete from the block first (later in buffer), then insert above stmt.
+  delete_range(buf, r[1], r[2], r[3], r[4])
+  api.nvim_buf_set_lines(buf, sr, sr, true, text)
+  return true
+end
+
 local function run(op, count)
   local buf = api.nvim_get_current_buf()
   local ok, err = pcall(parse, buf)
@@ -234,6 +295,8 @@ end
 
 function M.slurp(count) run(slurp_once, count) end
 function M.barf(count) run(barf_once, count) end
+function M.slurp_back(count) run(slurp_back_once, count) end
+function M.barf_back(count) run(barf_back_once, count) end
 
 function M.setup(opts)
   M.config = vim.tbl_deep_extend("force", M.config, opts or {})
@@ -242,6 +305,11 @@ function M.setup(opts)
     { count = 1, desc = "Slurp next statement into Rust block" })
   api.nvim_create_user_command("RustBarf", function(o) M.barf(o.count) end,
     { count = 1, desc = "Barf last statement out of Rust block" })
+
+  api.nvim_create_user_command("RustSlurpBack", function(o) M.slurp_back(o.count) end,
+    { count = 1, desc = "Slurp previous statement into Rust block" })
+  api.nvim_create_user_command("RustBarfBack", function(o) M.barf_back(o.count) end,
+    { count = 1, desc = "Barf first statement out before Rust block" })
 
   local km = M.config.keymaps
   if km then
@@ -256,6 +324,14 @@ function M.setup(opts)
         if km.barf then
           vim.keymap.set("n", km.barf, function() M.barf(vim.v.count1) end,
             { buffer = ev.buf, desc = "Rust barf" })
+        end
+        if km.slurp_back then
+          vim.keymap.set("n", km.slurp_back, function() M.slurp_back(vim.v.count1) end,
+            { buffer = ev.buf, desc = "Rust slurp backward" })
+        end
+        if km.barf_back then
+          vim.keymap.set("n", km.barf_back, function() M.barf_back(vim.v.count1) end,
+            { buffer = ev.buf, desc = "Rust barf backward" })
         end
       end,
     })
