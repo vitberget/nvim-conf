@@ -1,8 +1,14 @@
 return {
-    { 'glacambre/firenvim', build = ":call firenvim#install(0)" },
+    {
+        'glacambre/firenvim',
+        build = ":call firenvim#install(0)"
+    },
     { 'nfnty/vim-nftables' },
     { 'will133/vim-dirdiff' },
-    { 'echasnovski/mini.nvim', version = '*' },
+    {
+        'echasnovski/mini.nvim',
+        version = '*'
+    },
     {
         "https://github.com/arborist-ts/arborist.nvim",
         opts = {
@@ -200,11 +206,7 @@ return {
     {
         'brianhuster/live-preview.nvim',
         dependencies = {
-            -- You can choose one of the following pickers
-            -- 'nvim-telescope/telescope.nvim',
             'ibhagwan/fzf-lua',
-            -- 'echasnovski/mini.pick',
-            -- 'folke/snacks.nvim',
         },
     }
 }

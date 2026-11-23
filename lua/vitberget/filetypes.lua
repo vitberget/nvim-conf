@@ -29,7 +29,7 @@ vim.api.nvim_create_autocmd(
     })
 
 vim.api.nvim_create_autocmd(
-    {'BufRead', 'BufNewFile'}, 
+    {'BufRead', 'BufNewFile'},
     {
         desc = 'Set filetype for SSH config directory',
         pattern = '*.sshconfig',

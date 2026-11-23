@@ -1,15 +1,28 @@
 return {
-    { 'numToStr/Comment.nvim', opts = {}, lazy = false, },
+    {
+        'numToStr/Comment.nvim',
+        opts = {},
+        lazy = false,
+    },
     { 'neovim/nvim-lspconfig' },
-    { "williamboman/mason.nvim", opts = {} },
-    { 'williamboman/mason-lspconfig.nvim', config = function ()
-        require("mason-lspconfig").setup { }
-    end},
-    {"jay-babu/mason-nvim-dap.nvim", config = function ()
-        require("mason-nvim-dap").setup({
-            ensure_installed = { "codelldb", }
-        })
-    end},
+    {
+        "williamboman/mason.nvim",
+        opts = {}
+    },
+    {
+        'williamboman/mason-lspconfig.nvim',
+        config = function ()
+            require("mason-lspconfig").setup { }
+        end
+    },
+    {
+        "jay-babu/mason-nvim-dap.nvim",
+        config = function ()
+            require("mason-nvim-dap").setup({
+                ensure_installed = { "codelldb", }
+            })
+        end
+    },
     {
         'mrcjkb/rustaceanvim',
         version = '^9', -- Recommended
@@ -22,12 +35,17 @@ return {
         ft = {"toml"},
         tag = 'stable',
         config = function()
-            require("crates").setup {
-            }
+            require("crates").setup {}
         end
     },
     { 'folke/neodev.nvim' },
-    { "rcarriga/nvim-dap-ui", dependencies = {"mfussenegger/nvim-dap", "nvim-neotest/nvim-nio"} },
+    {
+        "rcarriga/nvim-dap-ui",
+        dependencies = {
+            "mfussenegger/nvim-dap",
+            "nvim-neotest/nvim-nio"
+        }
+    },
     { 'mfussenegger/nvim-dap' },
     {
         "Olical/conjure",
